@@ -1,0 +1,497 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - teach_whitecross
+  - teach_basics
+  - gratitude
+  - init
+  - daisy_pattern_initial
+  - daisy_pattern_goal
+  - iDo
+  - whitecross_instructions
+  - whitecross_noinstructions
+  - faq
+  - continue
+  - solve
+  - user_stuck  #White Cross user-task changes
+  - user_solved
+#  - exit_button
+  - user_task
+
+entities:
+  - ma
+
+slots:
+  ma:
+    type: text
+
+responses:
+
+  utter_user_introduction:
+    - text: "Hello, welcome to ALLURE! I'm Ally and I want to teach everyone how to solve a Rubik's Cube.\n\nToday we'll learn the different moves you need to know to solve the white cross.\n\n Would you like to hear more about the white cross and how we will learn the moves?"
+      buttons:
+        - title: "Yes"
+          payload: "/whitecross_instructions"
+        - title: "No"
+          payload: "/whitecross_noinstructions"
+
+  
+  utter_whitecross_explanation:
+    - text: "Let's talk about the white cross!\n\n First, what does the white cross even look like? On the UP face, the white cross will have the white centerpiece with the white edge pieces forming the cross. It is also important that color stickers of the white edge pieces are paired with their matching color centerpieces.\n\n We can see an example of the white cross below."
+      image: "https://i.imgur.com/ULbrOf8.png"
+      
+  utter_whitecross_whitegreen:
+    - text: "Today, I'll teach you the moves to solve the white cross by focusing on putting the white-green edge piece in its correct place. By learning these moves for the white-green edge piece, you can apply them to the other white edge pieces and solve the white cross."
+      buttons:
+        - title: "Continue"
+          payload: "/continue"
+  
+  utter_explain_scenarios:
+    - text: "We've broken the moves you need to know into different scenarios which will gradually increase in complexity.\n\n In each scenario, I'll guide you through finding the white-green edge piece and how you can move it to put it in place.\n\n To see the move performed on the virtual cube, just type in 'Solve'."
+  
+  utter_choose_scenario:
+    - text: "Awesome! Go ahead and pick a scenario to start learning: "
+      buttons:
+        - title: "Scenario 1"
+          payload: "Scenario 1"
+        - title: "Scenario 2"
+          payload: "Scenario 2"
+        - title: "Scenario 3"
+          payload: "Scenario 3"
+        - title: "Scenario 4"
+          payload: "Scenario 4"
+        - title: "Scenario 5"
+          payload: "Scenario 5"
+        - title: "Scenario 6"
+          payload: "Scenario 6"
+        - title: "Scenario 7"
+          payload: "Scenario 7"
+        - title: "Scenario 8"
+          payload: "Scenario 8"
+        - title: "Scenario 9"
+          payload: "Scenario 9"
+        - title: "Exit"
+          payload: "/user_task"
+  
+  utter_new_scenario:
+    - text: "Choose another scenario or repeat this one: "
+      buttons:
+        - title: "Scenario 1"
+          payload: "Scenario 1"
+        - title: "Scenario 2"
+          payload: "Scenario 2"
+        - title: "Scenario 3"
+          payload: "Scenario 3"
+        - title: "Scenario 4"
+          payload: "Scenario 4"
+        - title: "Scenario 5"
+          payload: "Scenario 5"
+        - title: "Scenario 6"
+          payload: "Scenario 6"
+        - title: "Scenario 7"
+          payload: "Scenario 7"
+        - title: "Scenario 8"
+          payload: "Scenario 8"
+        - title: "Scenario 9"
+          payload: "Scenario 9"
+        - title: "Exit"
+          payload: "/user_task"
+  
+  utter_encouragement:
+    - text: "You're doing awesome!"
+    - text: "Great job!"
+    - text: "You'll be able to solve a Rubik's Cube in no time!"
+    - text: "Nice job!"
+    - text: "You're learning so quickly!"
+
+  utter_greet:
+    - text: "Hello! I am EduLearn Bot. I can teach you how to solve Rubik's cube."
+      buttons:
+        - title: "Basics"
+          payload: "/teach_basics"
+        - title: "Show a white cross example"
+          payload: "/init"
+
+  utter_notabletosolve:
+    - text: "Are you stuck?"
+      buttons:
+        - title: "Yes"
+          payload: "/iDo"
+        - title: "No"
+          payload: "/deny"
+
+  utter_anyquestions:
+    - text: "Do you have any questions?"
+      buttons:
+        - title: "Yes"
+          payload: "/iDo"
+        - title: "No"
+          payload: "/deny"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_askUserForQuestion:
+    - text: "Please type the question you have."
+
+  utter_basics1:
+    - text: "Sure! I can teach you all the basics that are needed. Let's start with the different parts of the Rubik's cube."
+      image: "https://i.imgur.com/LTJjNSc.png"
+
+  utter_basics2:
+    - text: "Alright! Now I will show you how to move the faces of the cube with some examples!"
+      image: "https://i.imgur.com/xogGr2d.png"
+
+  utter_basics3:
+    - text: "Awesome! Now I will teach you the last part of the basics!"
+      image: "https://i.imgur.com/Z0QhcWo.png"
+
+  utter_basicsdone:
+    - text: "That's it! Now we can start solving the cube.\n\n You can refer to the images that I have shared in this conversation to familiarize yourself with the basics. \n\n You can start learning daisy pattern now! \n\n Happy learning!"
+
+  utter_faq/ask_layers:
+    - text: "There are three horizontal layers in a 3x3 Rubik’s Cube. "
+      image: "https://imgur.com/9kTG65W.png"
+
+  utter_faq/ask_corners:
+    - text: "Corner pieces have three colored tiles. There are 8 corner pieces.\n\n You can use three fingers to touch all sides of a CORNER piece."
+      image: "https://imgur.com/wErP0vw.png"
+
+  utter_faq/ask_faces:
+    - text: "Each flat surface is a face. There are 6 faces on a Rubik’s Cube.\n\n You can place your palm flat on a FACE."
+      image: "https://imgur.com/dboQCQ8.png"
+
+  utter_faq/ask_edges:
+    - text: "Edge pieces have two colored tiles. There are 12 edge pieces.\n\n You use two fingers to pinch an EDGE piece."
+      image: "https://imgur.com/GtnPAwu.png"
+
+  utter_faq/ask_centers:
+    - text: "Center pieces have one colored tile.\n\n There are 6 center pieces. Center pieces are single tiles, fixed to the internal core.\n\n The following center piece colors are always opposite each other:"
+      image: "https://imgur.com/MCPwoA1.png"
+
+  utter_faq/ask_motions:
+    - text: "The following are different face keys with their motions:"
+      image: "https://imgur.com/yZjw2jr.png"
+
+  utter_faq/ask_gray:
+    - text: "The gray areas on the Rubik’s Cube mean that at the stage you are working on, the color of the gray pieces doesn’t matter."
+
+  utter_faq/ask_two:
+    - text: "If there is a 2 next to the algorithm letter, turn the face twice."
+
+  utter_motions1:
+    - text: "These are the motions and keys for the UP and DOWN faces."
+      image: "https://imgur.com/KyvXHKC.png"
+
+  utter_motions2:
+    - text: "These are the motions and keys for the LEFT and RIGHT faces."
+      image: "https://imgur.com/mDjF4U4.png"
+
+  utter_motions3:
+    - text: "These are the motions and keys for the FRONT and BACK faces."
+      image: "https://imgur.com/XJRjZcq.png"
+
+  utter_daisy1:
+    - text: "I can show you how to make the daisy pattern.\n \n When you are finished with the cube the UP face looks like this."
+      image: "https://i.imgur.com/onXQOQH.png"
+
+  utter_daisy2:
+    - text: "Begin by holding your Rubik’s Cube with the yellow center piece on the UP (U) face."
+      image: "https://imgur.com/R9bMhf8.png"
+
+  utter_daisy3:
+    - text: "Look at the middle layer of the front face.\n\n If you find a white edge, move it to the UP layer as shown in the image."
+      image: "https://imgur.com/cTlEyJh.png"
+
+  utter_daisy4:
+    - text: "Make sure you don’t bump out the white edges that are already there in the daisy!\n\n Look at the following image for a solution."
+      image: "https://imgur.com/QPJvTj0.png"
+
+  utter_daisy5:
+    - text: "If any of your white tiles are positioned in either of these ways,"
+      image: "https://imgur.com/IYGDUzo.png"
+
+  utter_daisy6:
+    - text: "Apply the following set of moves."
+      image: "https://imgur.com/Yq8uHOO.png"
+
+  utter_daisy7:
+    - text: "If you have a white tile as shown in the image,\n\n then perform the action shown in the right side of the image."
+      image: "https://imgur.com/s996NZi.png"
+
+  utter_daisy8:
+    - text: "Repeat the appropriate steps for each of the pattern you encounter \n\n from what I have shown until you see the white daisy."
+
+  utter_daisydone:
+    - text: "Now you are ready to solve the white cross!"
+
+  utter_cross0:
+    - text: "Sure! I can show how to get the white cross from what you have."
+
+  utter_cross1:
+    - text: "Apply the following moves: D'F'RF as shown in the visualization so that the cube will look this way by the end of this step."
+
+  utter_crossdone:
+    - text: "Congrats! You have successfully solved the white cross! We can get started with the white corners now!"
+
+  utter_white_corners1:
+    - text: "Now, I will show you how to solve the white corners."
+      image: "https://i.imgur.com/mLKTQfv.png"
+
+  utter_white_corners2:
+    - text: "Make sure you are holding the cube such that white cross is facing UP"
+      image: "https://i.imgur.com/duuKFI5.png"
+
+  utter_white_corners3:
+    - text: "Keep in mind that the correct placement of a corner tile is between center pieces with the same colors as shown in the image below."
+      image: "https://i.imgur.com/GqTaLu3.png"
+
+  utter_white_corners4:
+    - text: "Locate a white corner tile in the bottom layer. Ask a question if needed."
+      image: "https://i.imgur.com/9M8kqYv.png"
+
+  utter_white_corners5:
+    - text: "Rotate the DOWN (D) face like this:"
+      image: "https://i.imgur.com/r0rBFlm.png"
+
+  utter_white_corners6:
+    - text: "Until the white corner is between the two matching colored center tiles like in one of the image below:"
+      image: "https://i.imgur.com/J367yL3.png"
+
+  utter_white_corners7:
+    - text: "Now hold the cube such that the white cross is on U face and white corner tile is on front face."
+      image: "https://i.imgur.com/8TXvTyd.png"
+
+  utter_white_corners8:
+    - text: "If white tile is on left like in the cube below."
+      image: "https://i.imgur.com/zUgdsri.png"
+
+  utter_white_corners9:
+    - text: "Do the following algorithm. Otherwise go to next step."
+      image: "https://i.imgur.com/ci7bE5i.png"
+
+  utter_white_corners10:
+    - text: "Else if white tile is on right like in the cube below."
+      image: "https://i.imgur.com/ZxNA5oT.png"
+
+  utter_white_corners11:
+    - text: "Do the following algorithm."
+      image: "https://i.imgur.com/a6kxN9e.png"
+
+  utter_white_corners12:
+    - text: "Now continue all the steps for white corners until all white corner pieces are in the correct positions."
+
+  utter_white_corners13:
+    - text: "Hurray! You have your cube 1/3 solved already."
+
+  utter_middle_layer1:
+    - text: "Now it's time to learn how to solve a middle layer\n\nThe end result would look like this"
+      image: "https://imgur.com/Z6MRNkC.png"
+
+  utter_middle_layer2:
+    - text: "Hold the cube so the that white face is DOWN face and white center piece is facing UP"
+      image: "https://i.imgur.com/ip9X56m.png"
+
+  utter_middle_layer3:
+    - text: "Choose any front face and rotate the UP face to create a vertical line similar to the images below."
+      image: "https://i.imgur.com/s7okoI0.png"
+
+  utter_middle_layer4:
+    - text: "If you can't match any of the images above. Try picking another front."
+
+  utter_middle_layer5:
+    - text: "If you are moving the edge piece to the left like in the image below."
+      image: "https://i.imgur.com/yC44LNA.png"
+
+  utter_middle_layer6:
+    - text: "First follow this algorithm"
+      image: "https://i.imgur.com/qrW1BPo.png"
+
+  utter_middle_layer7:
+    - text: "Then apply this algorithm"
+      image: "https://i.imgur.com/60Ytvdy.png"
+
+  utter_middle_layer8:
+    - text: "If you are moving the edge piece to the right like in the image below."
+      image: "https://i.imgur.com/OTmMZL7.png"
+
+  utter_middle_layer9:
+    - text: "First follow this algorithm"
+      image: "https://i.imgur.com/H4tJM0k.png"
+
+  utter_middle_layer10:
+    - text: "Then apply this algorithm"
+      image: "https://i.imgur.com/V7w9zbJ.png"
+
+  utter_middle_layer11:
+    - text: "Now, continue these steps until all the middle layer pieces are in correct position."
+
+  utter_middle_layer12:
+    - text: "Congrats! Now you are very close to solving the rubik's cube."
+
+  utter_make_yellow_cross1:
+    - text: "It's time to learn the first step in solving a final layer and how you can make yellow cross which will look like this"
+      image: "https://i.imgur.com/drx85X4.png"
+
+  utter_make_yellow_cross2:
+    - text: "Orient your cube so that one of the examples below is your UP face."
+      image: "https://i.imgur.com/sdC5HPG.png"
+
+  utter_make_yellow_cross3:
+    - text: "Then follow this algorithm known as FUR."
+      image: "https://i.imgur.com/TdPpHy4.png"
+
+  utter_make_yellow_cross4:
+    - text: "After that follow this U'R'F' algorithm."
+      image: "https://i.imgur.com/KuJqBps.png"
+
+  utter_make_yellow_cross5:
+    - text: "If you still have not reached the yellow cross, rematch the pattern in step one to a different configuration and try again."
+
+  utter_make_yellow_cross6:
+    - text: "Now you can move to step 2 of solving the final layer."
+
+  utter_orient_corners1:
+    - text: "After successfully applying these upcoming instruction your cube should look like this."
+      image: "https://i.imgur.com/cxj4cKk.png"
+
+  utter_orient_corners2:
+    - text: "Instructions provided will show you how to hold the cube"
+
+  utter_orient_corners3:
+    - text: "If one yellow corner piece is yellow.\n\n Hold the cube so that yellow corner piece is on bottom left corner."
+      image: "https://i.imgur.com/0ltNjRC.png"
+
+  utter_orient_corners4:
+    - text: "If no corner pieces are yellow. \n\n Then hold your cube with a yellow corner tile on the left face."
+      image: "https://i.imgur.com/Bd6oKiw.png"
+
+  utter_orient_corners5:
+    - text: "If two corners are yellow.\n\n Then hold the cube so that you can put your left thumb on non-yellow corner."
+      image: "https://i.imgur.com/DBKKjLu.png"
+
+  utter_orient_corners6:
+    - text: "Now follow this algorithm."
+      image: "https://i.imgur.com/LUUYEAe.png"
+
+  utter_orient_corners7:
+    - text: "If you did not have all the yellow tiles on UP face by now.\n\n You need to rematch cube holding position and try the algorithm again."
+
+  utter_orient_corners8:
+    - text: "Once you have solved yellow face, you can move to Step 3."
+
+  utter_position_yellow_corners1:
+    - text: "This is step 3 of solving final layer. After completion your cube should look like this."
+      image: "https://i.imgur.com/zLkQ5To.png"
+
+  utter_position_yellow_corners2:
+    - text: "Hold the cube so that fullly solved yellow layer is UP face."
+      image: "https://i.imgur.com/9soilfm.png"
+
+  utter_position_yellow_corners3:
+    - text: "Twist the UP face until colored tiles match the center colors like in the image below."
+      image: "https://i.imgur.com/IGZeazp.png"
+
+  utter_position_yellow_corners4:
+    - text: "Now hold the cube so it matches one of the configuration below."
+      image: "https://i.imgur.com/IZ2ldqc.png"
+
+  utter_position_yellow_corners5:
+    - text: "Now, below is the algorithm you need to follow."
+      image: "https://i.imgur.com/AAzHmZX.png"
+
+  utter_position_yellow_corners6:
+    - text: "After applying the algorithm, your cube should look like this."
+      image: "https://i.imgur.com/h27xZmb.png"
+
+  utter_position_yellow_corners7:
+    - text: "Again, you need to follow this algorithm below."
+      image: "https://i.imgur.com/0Lnrzs3.png"
+
+  utter_position_yellow_corners8:
+    - text: "After done with this algorithm, your cube should look like this."
+      image: "https://i.imgur.com/1EOBAN3.png"
+
+  utter_position_yellow_corners9:
+    - text: "Finally, apply this small algorithm below."
+      image: "https://i.imgur.com/VPVDDVA.png"
+
+  utter_position_yellow_corners10:
+    - text: "If you still not have positioned all yellow corners correctly.\n\nRematch the cube to one of the configuration above again and repeat the algorithm."
+
+  utter_position_yellow_corners11:
+    - text: "Once you have solved yellow corners, you can move to Step 4."
+
+  utter_position_yellow_edges1:
+    - text: "This is the final step to complete a Rubik's cube.\n\nYour cube will look like this after these steps."
+      image: "https://i.imgur.com/fO27gxh.png"
+
+  utter_position_yellow_edges2:
+    - text: "Hold your cube so the solved face is the Back and yellow face is UP."
+      image: "https://i.imgur.com/QwcKwZJ.png"
+
+  utter_position_yellow_edges3:
+    - text: "Before we get to the algorithm. Look at the unsolved edge on the FRONT face.\n\nIs it the same color as the center tile of the LEFT face or RIGHT face?"
+
+  utter_position_yellow_edges4:
+    - text: "If LEFT face then follow the algorithm. \n\nIf RIGHT face then first apply these instructions below."
+      image: "https://i.imgur.com/p7Lsc0F.png"
+
+  utter_position_yellow_edges5:
+    - text: "Now, the final algorithm you need to appy is below. \n\n You may apply this upto 3 times to move the unsolved edges."
+      image: "https://i.imgur.com/QtvOuCo.png"
+
+  utter_position_yellow_edges6:
+    - text: "If you restart the algorithm, make sure a solved face starts as the BACK face of the Rubik’s Cube."
+
+  utter_position_yellow_edges7:
+    - text: "Congratulations! You have solved the Rubik's Cube.\n\nNow it's time to practice and get faster."
+
+  utter_happy:
+    - text: "That's awesome!"
+
+  utter_goodbye:
+    - text: "Goodbye. Have a good day!"
+
+  utter_iamabot:
+    - text: "I am EduLearn Bot!"
+
+  utter_welcome:
+    - text: "I am glad I was able to help you!"
+
+  #White Cross user-task changes
+  utter_user_task_intro:
+    - text: "Are you ready to solve the white-cross on your own?"
+      buttons:
+        - title: "Yes"
+          payload: "/iDo"
+        - title: "No"
+          payload: "/whitecross_instructions"
+
+  utter_user_task:
+    - text: "The goal is to reach the white-cross from the given configuration.Below is one example.\n\nIf you're stuck at any point just let me know.\n\nAll the best!"
+      image: "https://i.imgur.com/C9MqaK2.png"
+
+actions:
+  - action_init
+  - action_solve
+  - action_user_task
+
+
+forms: {}
+
+e2e_actions: []
+
+config:
+  store_entities_as_slots: true
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

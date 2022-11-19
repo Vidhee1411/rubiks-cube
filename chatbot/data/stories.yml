@@ -1,0 +1,235 @@
+version: "2.0"
+
+stories:
+
+  - story: white cross no instruction intro
+    steps:
+      - intent: greet
+      - action: utter_user_introduction
+      - intent: whitecross_noinstructions
+      - action: utter_choose_scenario
+      - intent: init
+      - action: action_init
+  - story: white cross instruction intro
+    steps:
+      - intent: greet
+      - action: utter_user_introduction
+      - intent: whitecross_instructions
+      - action: utter_whitecross_explanation
+      - action: utter_whitecross_whitegreen
+      - intent: continue
+      - action: utter_explain_scenarios
+      - action: utter_choose_scenario
+      - intent: init
+      - action: action_init
+  # - story: happy path
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: mood_great
+  #     - action: utter_happy
+
+  # - story: basics path no questions
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: teach_basics
+  #     - action: utter_faq/ask_layers
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: utter_faq/ask_faces
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: utter_faq/ask_centers
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: utter_faq/ask_edges
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: utter_faq/ask_corners
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: utter_motions1
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: utter_motions2
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: utter_motions3
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: utter_faq/ask_gray
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: utter_basicsdone
+  #     - intent: gratitude
+  #     - action: utter_welcome
+
+  - story: init
+    steps:
+      - intent: init
+        entities:
+          - ma: "5"
+      - slot_was_set:
+          - ma: "5"
+      - action: action_init
+  
+  - story: solve
+    steps:
+      - intent: solve
+      - action: action_solve
+      - action: utter_encouragement
+      - action: utter_new_scenario
+      - intent: init
+      - action: action_init
+
+  - story: User interrupts the form and doesn't want to continue
+    steps:
+      - intent: init
+      - action: action_init
+      - active_loop: init_form
+      - active_loop: null
+
+  # - story: daisy pattern go to initial state
+  #   steps:
+  #     - intent: daisy_pattern_initial
+  #     - action: action_daisy_initial
+
+  # - story: daisy pattern go to goal state
+  #   steps:
+  #     - intent: daisy_pattern_goal
+  #     - action: action_moveDCCW
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: action_moveFCCW
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: action_moveRCW
+  #     - action: utter_anyquestions
+  #     - intent: deny
+  #     - action: action_moveFCW
+# - story: daisy path no questions
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: teach_daisy
+#   - action: utter_daisy1
+#   - action: utter_anyquestions
+#   - intent: deny
+#   - action: utter_daisy2
+#   - action: utter_anyquestions
+#   - intent: deny
+#   - action: utter_daisy3
+#   - action: utter_notabletosolve
+#   - intent: deny
+#   - action: utter_daisy4
+#   - action: utter_notabletosolve
+#   - intent: deny
+#   - action: utter_daisy5
+#   - action: utter_daisy6
+#   - action: utter_notabletosolve
+#   - intent: deny
+#   - action: utter_daisy7
+#   - action: utter_notabletosolve
+#   - intent: deny
+#   - action: utter_daisy8
+#   - action: utter_notabletosolve
+#   - intent: deny
+#   - action: utter_daisydone
+
+# White cross stories
+# WCCP refers to White Cross Check Point
+# - story: whitecross1
+#   steps:
+#     - intent: teach_whitecross
+#     - action: utter_cross1
+#     - checkpoint: wccp1
+
+# - story: whitecross2 user have no question
+#   steps:
+#     - checkpoint: wccp1
+#     - action: utter_cross2
+#     - action: utter_anyquestions
+#     - intent: deny
+#     - checkpoint: wccp2
+# - story: whitecross2 user have question
+#   steps:
+#     - checkpoint: wccp1
+#     - action: utter_cross2
+#     - action: utter_anyquestions
+#     - intent: iDo
+#     - action: utter_askUserForQuestion
+#     - checkpoint: wccp2
+
+# - story: whitecross3 user have no question
+#   steps:
+#     - checkpoint: wccp2
+#     - action: utter_cross3
+#     - action: utter_anyquestions
+#     - intent: deny
+#     - checkpoint: wccp3
+# - story: whitecross3 user have question
+#   steps:
+#     - checkpoint: wccp2
+#     - action: utter_cross3
+#     - action: utter_anyquestions
+#     - intent: iDo
+#     - action: utter_askUserForQuestion
+#     - checkpoint: wccp3
+
+# - story: whitecross4 user have no question
+#   steps:
+#     - checkpoint: wccp3
+#     - action: utter_cross4
+#     - action: utter_anyquestions
+#     - intent: deny
+#     - checkpoint: wccp4
+
+# - story: whitecross4 user have question
+#   steps:
+#     - checkpoint: wccp3
+#     - action: utter_cross4
+#     - action: utter_anyquestions
+#     - intent: iDo
+#     - action: utter_askUserForQuestion
+#     - checkpoint: wccp4
+
+# - story: whitecross5 user have no question
+#   steps:
+#     - checkpoint: wccp4
+#     - action: utter_cross5
+#     - checkpoint: wccp5
+
+# - story: whitecross6 user have no question
+#   steps:
+#     - checkpoint: wccp5
+#     - action: utter_crossdone
+
+#White Cross user-task changes
+  - story: white cross user task
+    steps:
+      - intent: user_task
+      - action: utter_user_task_intro
+      - checkpoint: is_user_ready
+      - intent: iDo
+      - action: utter_user_task
+      - action: action_user_task
+      - intent: user_stuck
+      - action: utter_notabletosolve
+      - checkpoint: is_user_stuck
+      - intent: deny
+      - action: utter_encouragement
+      - intent: user_solved
+      - action: utter_crossdone
+
+  - story: user_needs_help
+    steps:
+      - checkpoint: is_user_stuck
+      - intent: iDo
+      - action: utter_choose_scenario
+
+  - story: user_isnt_ready
+    steps:
+      - checkpoint: is_user_ready
+      - intent: deny
+      - action: utter_choose_scenario

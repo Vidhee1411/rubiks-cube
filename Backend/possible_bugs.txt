@@ -1,0 +1,8 @@
+# Order of predicates matters?
+t(A,B):- t1(C,B),move(C,D,E,A),clockwise(E),sticker(D).  # does not work
+
+t(A,B):- sticker(D),move(C,D,E,A),t1(C,B),clockwise(E).  # works
+t(A,B):- sticker(C),move(E,C,D,A),t1(E,B),clockwise(D).  # works
+
+
+# Comparing hashes to show equality for Literal and Clause

@@ -1,0 +1,3 @@
+DIR=`pwd`
+export PYTHONPATH=$DIR:$PYTHONPATH
+export PYTHONPATH=$DIR/popper/:$PYTHONPATH

@@ -1,0 +1,86 @@
+{  "predicates": [
+        {"name": "cubelet",
+         "numargs": 1,
+         "description": "There is a cubelet $1."
+        },
+        {"name": "has_stk",
+         "numargs": 2,
+         "description": "Cubelet $1 has some sticker $2."
+        },
+        {"name": "match_90",
+         "numargs": 3,
+         "description": "There is a cubelet $2 with a sticker $3, there is a move you can make so that $3 macthes the face it belongs to. You can move a sticker 90 to a face it belongs to."
+        },
+        {"name": "blue",
+         "numargs": 1,
+         "description": "$1 is blue in color."
+        },
+        {"name": "match_180_flip",
+         "numargs": 3,
+         "description": "There is a cubelet $2 with a sticker $3, there is a move you can make so that the sticker $3 matches the face it belongs to. you can flip a sticker $3 by 180 to match the face it belongs to."
+        },
+        {
+          "name": "white",
+          "numargs": 1,
+          "description": "$1 is white in color."
+        },
+        {"name": "match_0_flip",
+         "numargs": 3,
+         "description": "There is a cubelet $2 with a sticker $3, there is a move you can make so that the sticker $3 matches the face it belongs to. you can flip a sticker $3 by 0 to match the face it belongs to."
+        },
+        {"name": "edge",
+         "numargs": 1,
+         "description": "$1 is a edge cubelet."
+        },
+        {"name": "match_0",
+         "numargs": 3,
+          "description": "There is a cubelet $2 with a sticker $3, there is a move you can make so that $3 macthes the face it belongs to. You can move a sticker 0 degree to a face it belongs to."
+        },
+        {"name": "onface",
+         "numargs": 4,
+         "description": "This configuration $1 there is a cubelet $2 with sticker $3  that is on face $4."
+        },
+        {"name": "match_stk_f",
+         "numargs": 2,
+         "description": "$1 sticker matches face $2."
+        },
+        {"name": "face",
+         "numargs": 1,
+         "description": "This is some face $1."
+        },
+        {"name": "match_cl",
+         "numargs": 3,
+         "description": "There is a cubelet $2 with a sticker $3, there is a move you can make so that $3 macthes the face it belongs to. You can move a sticker 90 clockwise to a face it belongs to."
+        },
+        {"name": "face_rel_cl",
+         "numargs":  4,
+         "description": "Configuration $1 that has sticker $3 on cubelet $2 that has some relationship to face $4 in clockwise direction."
+        },
+        {"name": "match_cc",
+         "numargs": 3,
+         "description": "There is a cubelet $2 with a sticker $3, there is a move you can make so that $3 matches the face it belongs to. You can move a sticker 90 counter clockwise to a face it belongs to."
+        },
+        {"name": "face_rel_cc",
+         "numargs": 4,
+         "description": "Configuration $1 that has sticker $3 on cubelet $2 that has some relationship to face $4 in counter clockwise direction."
+        },
+        {"name": "face_rel_90",
+         "numargs": 4,
+         "description": "Configuration $1 that has sticker $3 on cubelet $2 that has some relationship to face $4 in 90 degree direction."
+        },
+        {"name": "match_180",
+         "numargs": 3,
+         "description": "There is a cubelet $2 with a sticker $3, there is a move you can make so that $3 macthes the face it belongs to. You can move a sticker 180 to a face it belongs to."
+
+        },
+        {"name": "face_rel_180",
+         "numargs": 4,
+         "description": "Configuration $1 that has sticker $3 on cubelet $2 that has some relationship to face $4 in 180 direction."
+
+        },
+        {"name": "yellow",
+         "numargs": 1,
+         "description": "$1 is yellow in color."
+        }
+  ]
+}

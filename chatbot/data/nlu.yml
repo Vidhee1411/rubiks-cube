@@ -1,0 +1,297 @@
+version: "2.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - you are right
+      - I agree
+      - sure
+      - yeah
+
+  - intent: iDo
+    examples: |
+      - yes
+      - I do
+      - yea
+      - yep
+      - yeah
+      - ya
+
+  - intent: deny
+    examples: |
+      - no
+      - nope
+      - never
+      - I don't think so
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+      - I am not feeling good
+      - I am not feeling very good
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: teach_basics
+    examples: |
+      - Can you please teach me the basics of Rubik's cube?
+      - I don't know anything about Rubik's cube. Can you explain the basics?
+      - Can you explain the basics of Rubik's cube.
+      - Please give me more information on Rubik's cube.
+      - I need more information on Rubik's cube.
+
+  - intent: teach_daisy
+    examples: |
+      - Can you please teach me how to do the daisy pattern of Rubik's cube?
+      - How to get the daisy pattern on the cube?
+      - Can you show me how to do daisy pattern on the cube?
+      - Please show me how to solve daisy pattern on the cube.
+      - Give me the steps to solve daisy pattern.
+      - How to solve for daisy pattern?
+      - Teach me daisy pattern.
+      - I don't know how to do daisy pattern.
+
+  - intent: faq/ask_layers
+    examples: |
+      - What are layers in the cube?
+      - Can you tell me about layers in the cube?
+      - What are layers?
+      - I don't know about layers. Can you explain?
+
+  - intent: faq/ask_corners
+    examples: |
+      - What are corners in the cube?
+      - Can you tell me about the corners?
+      - I don't know about corners. Can you explain?
+      - What are corners?
+      - Please explain about Rubik's cube corners.
+
+  - intent: faq/ask_edges
+    examples: |
+      - What are edges in the cube?
+      - What are edges?
+      - I don't know about edges. Can you explain?
+      - Please tell me about cube edges.
+      - Explain about Rubik's cube edges.
+
+  - intent: faq/ask_faces
+    examples: |
+      - What are faces in the cube?
+      - What are faces?
+      - I don't know about faces. Can you explain?
+      - Please tell me about cube faces.
+      - Explain about Rubik's cube faces.
+
+  - intent: faq/ask_centers
+    examples: |
+      - What are centers in the cube?
+      - What are centers?
+      - I don't know about centers. Can you explain?
+      - Please tell me about cube centers.
+      - Explain about Rubik's cube centers.
+
+  - intent: faq/ask_motions
+    examples: |
+      - What are different motions in the cube?
+      - What are the different movements in the cube?
+      - Can you tell me about different face keys and their movements?
+      - Can you tell me about the cube motions?
+      - I don't know about movements. Can you explain?
+      - Please explain about Rubik's cube motions.
+
+  - intent: faq/ask_two
+    examples: |
+      - What is the two next to the algorithm?
+      - What is F2?
+      - Why is there a 2 next to some moves?
+      - What is the 2 next to the algorithm?
+      - What is 2 in F2?
+      - What is two in D2?
+      - What does 2 in the algorithm mean?
+
+  - intent: faq/ask_gray
+    examples: |
+      - What are gray cells on the cube?
+      - Why are there gray cells?
+      - gray cells?
+      - What does those gray cells indicate?
+
+  - intent: teach_whitecross
+    examples: |
+      - Can you teach me how to solve white cross? 
+      - How to get white cross on my Rubik's cube?
+      - Please tell me how to get white cross on the cube?
+      - How to get the cross?
+      - Tell me how to solve the white cross!
+
+  - intent: teach_white_corners
+    examples: |
+      - Can you teach me how to solve for white corners?
+      - Can you teach me how to solve for corners?
+      - How do I solve for corners?
+      - How do I solve for white corners?
+      - I need to learn white corners now.
+      - I need to learn how to solve for corners now.
+
+  - intent: teach_middle_layer
+    examples: |
+      - Show me how to solve for middle layer
+      - How can I solve middle layer
+      - Can you tell me how to solve a middle layer
+      - I need to learn how to solve for middle layer
+
+  - intent: teach_final_layer_make_yellow_cross
+    examples: |
+      - Can you teach me first step of final layer
+      - Can you help me learn how to make a yellow cross
+
+  - intent: teach_final_layer_orient_corners
+    examples: |
+      - Can you teach me second step of final layer
+      - Can you help me learn how to orient yellow corners
+
+  - intent: teach_final_layer_position_yellow_corners
+    examples: |
+      - Can you teach me third step of final layer
+      - Can you help me learn how to position yellow corners
+
+  - intent: teach_final_layer_position_yellow_edges
+    examples: |
+      - Can you teach me fourth step of final layer
+      - Can you help me learn how to position yellow edges
+
+  - intent: gratitude
+    examples: |
+      - Thank you.
+      - Thanks.
+      - Thank you so much.
+      - Thanks for the help.
+      - Thanks for helping me with this.
+
+  - intent: init
+    examples: |
+      - Show move [0]{"entity": "ma"}
+      - Show move [1]{"entity": "ma"}
+      - Perform Scenario [2]{"entity": "ma"}
+      - Do Scenario [11]{"entity": "ma"}
+      - Scenario [14]{"entity": "ma"}
+
+  - intent: solve
+    examples: |
+      - Solve
+
+  - intent: continue
+    examples: |
+      - Continue
+      - continue
+      - Keep going
+      - move on
+      - makes sense
+  
+  - intent: whitecross_instructions
+    examples: |
+      - Yes
+      - Show the white cross
+      - Instructions
+
+  - intent: whitecross_noinstructions
+    examples: |
+      - No
+      - I don't need instructions
+      - Skip
+
+  #White Cross user-task changes
+  - intent: user_stuck
+    examples: |
+      - I'm stuck
+      - I need help with this
+      - Help me solve the cube
+
+  - intent: user_solved
+    examples: |
+      - Solved!
+      - I've solved the cube
+      - All done!
+
+#Best use this to exit the chatbot
+#  - intent: exit_button
+#    examples: |
+#      - Exit
+
+  - intent: user_task
+    examples: |
+      - Test my knowledge
+      - Give me a challenge

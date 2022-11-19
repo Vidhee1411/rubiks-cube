@@ -1,0 +1,4189 @@
+---Initializing Prolog---
+Salient start state:
+salient_start(A) :- true
+Salient transition:
+salient_t(A,B) :- not_in_place(A,Cbl),in_place(B,Cbl),in_place_subset(A,B), !
+Time: 0.09042549133300781
+
+---Loading heuristic function---
+Time: 4.467894077301025
+
+---Getting Start States---
+Time: 0.4181840419769287
+
+---Finding Macro Actions---
+******* Iteration: 0 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 29
+Macro action chosen:
+act(A,B):- move(A,w,cl,B)
+Time: 7.939953327178955
+
+---Getting Training Data---
+Positive: 492, Negative: 508, Total: 1000 (Time: 1.2198431491851807)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,D),white(D),has_stk(B,C),match_90(A,B,D),match_0(A,B,C).
+Time: 43.492884159088135
+
+---Applying 1 macro action(s) to 1000 unsolved states---
+Num moved: 281, Num Solved: 0
+Time: 2.481200695037842
+
+---Progress---
+Macro actions learned: 1
+0/1000 states solved (0.0%)
+
+******* Iteration: 1 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 40
+Macro action chosen:
+act(A,B):- move(A,w,cl,B)
+Time: 8.794097900390625
+
+---Getting Training Data---
+Positive: 211, Negative: 789, Total: 1000 (Time: 0.932600736618042)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,B)
+Precondition not learned
+Time: 41.914820432662964
+
+---Progress---
+Macro actions learned: 1
+0/1000 states solved (0.0%)
+
+******* Iteration: 2 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 40
+Macro action chosen:
+act(A,B):- move(A,o,cl,S1),move(S1,g,cl,B)
+Time: 9.24802041053772
+
+---Getting Training Data---
+Positive: 514, Negative: 486, Total: 1000 (Time: 2.6712961196899414)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cl,S1),move(S1,g,cl,B)
+Precondition:
+precond(A):- cubelet(C),has_stk(C,B),has_stk(C,D),white(D),match_0_flip(A,C,D),match_90(A,C,B).
+Time: 54.441022634506226
+
+---Applying 2 macro action(s) to 1000 unsolved states---
+Num moved: 247, Num Solved: 2
+Time: 5.245755434036255
+
+---Progress---
+Macro actions learned: 2
+2/1000 states solved (0.2%)
+
+******* Iteration: 3 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 43
+Macro action chosen:
+act(A,B):- move(A,w,cl,B)
+Time: 9.384593963623047
+
+---Getting Training Data---
+Positive: 165, Negative: 833, Total: 998 (Time: 0.8620905876159668)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,B)
+Precondition not learned
+Time: 35.56276273727417
+
+---Progress---
+Macro actions learned: 2
+2/1000 states solved (0.2%)
+
+******* Iteration: 4 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 46
+Macro action chosen:
+act(A,B):- move(A,r,cl,S1),move(S1,w,cc,B)
+Time: 9.93352198600769
+
+---Getting Training Data---
+Positive: 425, Negative: 573, Total: 998 (Time: 2.6134822368621826)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cl,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 52.20019054412842
+
+---Progress---
+Macro actions learned: 2
+2/1000 states solved (0.2%)
+
+******* Iteration: 5 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Time: 10.05379033088684
+
+---Getting Training Data---
+Positive: 165, Negative: 833, Total: 998 (Time: 0.9420228004455566)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 26.416339874267578
+
+---Progress---
+Macro actions learned: 2
+2/1000 states solved (0.2%)
+
+******* Iteration: 6 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,B)
+Time: 10.204002141952515
+
+---Getting Training Data---
+Positive: 215, Negative: 783, Total: 998 (Time: 1.008366346359253)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),match_180(A,B,C),white(C),has_stk(B,D),match_0(A,B,D).
+Time: 31.822086572647095
+
+---Applying 3 macro action(s) to 998 unsolved states---
+Num moved: 143, Num Solved: 7
+Time: 3.23947811126709
+
+---Progress---
+Macro actions learned: 3
+9/1000 states solved (0.9%)
+
+******* Iteration: 7 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 46
+Macro action chosen:
+act(A,B):- move(A,w,cl,B)
+Time: 9.343466758728027
+
+---Getting Training Data---
+Positive: 143, Negative: 848, Total: 991 (Time: 0.8369512557983398)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,B)
+Precondition not learned
+Time: 37.756725549697876
+
+---Progress---
+Macro actions learned: 3
+9/1000 states solved (0.9%)
+
+******* Iteration: 8 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 50
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,B)
+Time: 9.465721845626831
+
+---Getting Training Data---
+Positive: 392, Negative: 599, Total: 991 (Time: 2.7224366664886475)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 39.063732862472534
+
+---Progress---
+Macro actions learned: 3
+9/1000 states solved (0.9%)
+
+******* Iteration: 9 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 49
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Time: 9.817705154418945
+
+---Getting Training Data---
+Positive: 143, Negative: 848, Total: 991 (Time: 0.9390614032745361)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 33.54410409927368
+
+---Progress---
+Macro actions learned: 3
+9/1000 states solved (0.9%)
+
+******* Iteration: 10 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 53
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cc,B)
+Time: 9.8589928150177
+
+---Getting Training Data---
+Positive: 228, Negative: 763, Total: 991 (Time: 2.708958864212036)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 43.43575191497803
+
+---Progress---
+Macro actions learned: 3
+9/1000 states solved (0.9%)
+
+******* Iteration: 11 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 52
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,B)
+Time: 9.923742294311523
+
+---Getting Training Data---
+Positive: 72, Negative: 919, Total: 991 (Time: 0.8731284141540527)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,B)
+Precondition not learned
+Time: 30.686545610427856
+
+---Progress---
+Macro actions learned: 3
+9/1000 states solved (0.9%)
+
+******* Iteration: 12 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 53
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Time: 9.945484399795532
+
+---Getting Training Data---
+Positive: 143, Negative: 848, Total: 991 (Time: 0.9205582141876221)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 30.551514625549316
+
+---Progress---
+Macro actions learned: 3
+9/1000 states solved (0.9%)
+
+******* Iteration: 13 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 55
+Macro action chosen:
+act(A,B):- move(A,b,cc,S1),move(S1,o,cl,S2),move(S2,b,cl,B)
+Time: 10.146418809890747
+
+---Getting Training Data---
+Positive: 659, Negative: 332, Total: 991 (Time: 2.427899122238159)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cc,S1),move(S1,o,cl,S2),move(S2,b,cl,B)
+Precondition:
+precond(A):- cubelet(C),has_stk(C,B),white(B),has_stk(C,D),match_180_flip(A,C,B),match_90(A,C,D).
+Time: 56.61684989929199
+
+---Applying 4 macro action(s) to 991 unsolved states---
+Num moved: 293, Num Solved: 25
+Time: 9.853332042694092
+
+---Progress---
+Macro actions learned: 4
+34/1000 states solved (3.4%)
+
+******* Iteration: 14 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 50
+Macro action chosen:
+act(A,B):- move(A,w,cl,B)
+Time: 10.151127099990845
+
+---Getting Training Data---
+Positive: 98, Negative: 868, Total: 966 (Time: 0.7335588932037354)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,B)
+Precondition not learned
+Time: 31.520384550094604
+
+---Progress---
+Macro actions learned: 4
+34/1000 states solved (3.4%)
+
+******* Iteration: 15 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 48
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,B)
+Time: 9.91559362411499
+
+---Getting Training Data---
+Positive: 147, Negative: 819, Total: 966 (Time: 2.537783145904541)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 27.606913805007935
+
+---Progress---
+Macro actions learned: 4
+34/1000 states solved (3.4%)
+
+******* Iteration: 16 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 52
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Time: 10.139112710952759
+
+---Getting Training Data---
+Positive: 98, Negative: 868, Total: 966 (Time: 0.8081541061401367)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 32.51474404335022
+
+---Progress---
+Macro actions learned: 4
+34/1000 states solved (3.4%)
+
+******* Iteration: 17 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Time: 10.288315057754517
+
+---Getting Training Data---
+Positive: 49, Negative: 917, Total: 966 (Time: 0.7548394203186035)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 21.716753244400024
+
+---Progress---
+Macro actions learned: 4
+34/1000 states solved (3.4%)
+
+******* Iteration: 18 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 53
+Macro action chosen:
+act(A,B):- move(A,r,cc,S1),move(S1,w,cc,B)
+Time: 10.432240962982178
+
+---Getting Training Data---
+Positive: 146, Negative: 820, Total: 966 (Time: 2.5097544193267822)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cc,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 25.141655445098877
+
+---Progress---
+Macro actions learned: 4
+34/1000 states solved (3.4%)
+
+******* Iteration: 19 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 53
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Time: 10.671525478363037
+
+---Getting Training Data---
+Positive: 98, Negative: 868, Total: 966 (Time: 0.8035774230957031)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 27.76147437095642
+
+---Progress---
+Macro actions learned: 4
+34/1000 states solved (3.4%)
+
+******* Iteration: 20 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 53
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,g,cc,S2),move(S2,w,cc,B)
+Time: 10.454381704330444
+
+---Getting Training Data---
+Positive: 414, Negative: 552, Total: 966 (Time: 2.369035243988037)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,g,cc,S2),move(S2,w,cc,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),has_stk(B,D),match_0_flip(A,B,C),match_90(A,B,D).
+Time: 39.316097259521484
+
+---Applying 5 macro action(s) to 966 unsolved states---
+Num moved: 255, Num Solved: 43
+Time: 8.88542628288269
+
+---Progress---
+Macro actions learned: 5
+77/1000 states solved (7.7%)
+
+******* Iteration: 21 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 46
+Macro action chosen:
+act(A,B):- move(A,w,cl,B)
+Time: 10.243756771087646
+
+---Getting Training Data---
+Positive: 76, Negative: 847, Total: 923 (Time: 0.6469147205352783)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,B)
+Precondition not learned
+Time: 33.8495876789093
+
+---Progress---
+Macro actions learned: 5
+77/1000 states solved (7.7%)
+
+******* Iteration: 22 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 48
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Time: 10.26188039779663
+
+---Getting Training Data---
+Positive: 76, Negative: 847, Total: 923 (Time: 0.7083044052124023)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 29.946351051330566
+
+---Progress---
+Macro actions learned: 5
+77/1000 states solved (7.7%)
+
+******* Iteration: 23 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 50
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Time: 10.365904331207275
+
+---Getting Training Data---
+Positive: 76, Negative: 847, Total: 923 (Time: 0.7112834453582764)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 29.964233875274658
+
+---Progress---
+Macro actions learned: 5
+77/1000 states solved (7.7%)
+
+******* Iteration: 24 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 49
+Macro action chosen:
+act(A,B):- move(A,r,cl,S1),move(S1,w,cc,B)
+Time: 10.253055095672607
+
+---Getting Training Data---
+Positive: 109, Negative: 814, Total: 923 (Time: 2.3046224117279053)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cl,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 26.096658945083618
+
+---Progress---
+Macro actions learned: 5
+77/1000 states solved (7.7%)
+
+******* Iteration: 25 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 50
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,B)
+Time: 10.10703444480896
+
+---Getting Training Data---
+Positive: 33, Negative: 890, Total: 923 (Time: 0.6688082218170166)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,B)
+Precondition not learned
+Time: 18.50714874267578
+
+---Progress---
+Macro actions learned: 5
+77/1000 states solved (7.7%)
+
+******* Iteration: 26 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 49
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,g,cl,S2),move(S2,w,cc,B)
+Time: 10.321894884109497
+
+---Getting Training Data---
+Positive: 381, Negative: 542, Total: 923 (Time: 2.053896427154541)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,g,cl,S2),move(S2,w,cc,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),has_stk(B,D),match_180_flip(A,B,D),match_90(A,B,C).
+Time: 17.792713403701782
+
+---Applying 6 macro action(s) to 923 unsolved states---
+Num moved: 313, Num Solved: 75
+Time: 11.023462533950806
+
+---Progress---
+Macro actions learned: 6
+152/1000 states solved (15.2%)
+
+******* Iteration: 27 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 47
+Macro action chosen:
+act(A,B):- move(A,w,cl,B)
+Time: 9.893454313278198
+
+---Getting Training Data---
+Positive: 38, Negative: 810, Total: 848 (Time: 0.5275909900665283)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,B)
+Precondition not learned
+Time: 25.331448078155518
+
+---Progress---
+Macro actions learned: 6
+152/1000 states solved (15.2%)
+
+******* Iteration: 28 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 46
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Time: 9.840160369873047
+
+---Getting Training Data---
+Positive: 18, Negative: 830, Total: 848 (Time: 0.5769240856170654)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 20.59805154800415
+
+---Progress---
+Macro actions learned: 6
+152/1000 states solved (15.2%)
+
+******* Iteration: 29 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 47
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Time: 10.093806982040405
+
+---Getting Training Data---
+Positive: 38, Negative: 810, Total: 848 (Time: 0.5822470188140869)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 22.346038341522217
+
+---Progress---
+Macro actions learned: 6
+152/1000 states solved (15.2%)
+
+******* Iteration: 30 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 48
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Time: 9.986036777496338
+
+---Getting Training Data---
+Positive: 38, Negative: 810, Total: 848 (Time: 0.5829710960388184)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 24.65791344642639
+
+---Progress---
+Macro actions learned: 6
+152/1000 states solved (15.2%)
+
+******* Iteration: 31 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 48
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Time: 10.137083053588867
+
+---Getting Training Data---
+Positive: 121, Negative: 727, Total: 848 (Time: 2.0687406063079834)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 32.51021075248718
+
+---Progress---
+Macro actions learned: 6
+152/1000 states solved (15.2%)
+
+******* Iteration: 32 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 50
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,g,cc,S2),move(S2,r,cl,B)
+Time: 10.089919090270996
+
+---Getting Training Data---
+Positive: 128, Negative: 720, Total: 848 (Time: 2.0820281505584717)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,g,cc,S2),move(S2,r,cl,B)
+Precondition not learned
+Time: 26.881139278411865
+
+---Progress---
+Macro actions learned: 6
+152/1000 states solved (15.2%)
+
+******* Iteration: 33 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,b,cc,B)
+Time: 10.335034132003784
+
+---Getting Training Data---
+Positive: 72, Negative: 776, Total: 848 (Time: 1.8941805362701416)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 26.96152687072754
+
+---Progress---
+Macro actions learned: 6
+152/1000 states solved (15.2%)
+
+******* Iteration: 34 *******
+---Getting Macro Actions---
+Number of banned macro actions: 7
+Macro actions found: 50
+Macro action chosen:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,g,cl,B)
+Time: 10.496959209442139
+
+---Getting Training Data---
+Positive: 175, Negative: 673, Total: 848 (Time: 2.140711784362793)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,g,cl,B)
+Precondition not learned
+Time: 30.654709100723267
+
+---Progress---
+Macro actions learned: 6
+152/1000 states solved (15.2%)
+
+******* Iteration: 35 *******
+---Getting Macro Actions---
+Number of banned macro actions: 8
+Macro actions found: 52
+Macro action chosen:
+act(A,B):- move(A,y,cl,S1),move(S1,g,cc,S2),move(S2,g,cc,B)
+Time: 10.652894973754883
+
+---Getting Training Data---
+Positive: 329, Negative: 519, Total: 848 (Time: 1.9996135234832764)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cl,S1),move(S1,g,cc,S2),move(S2,g,cc,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),match_90(A,B,C),has_stk(B,D),white(D),match_180(A,B,D).
+Time: 32.35720109939575
+
+---Applying 7 macro action(s) to 848 unsolved states---
+Num moved: 288, Num Solved: 163
+Time: 11.19876480102539
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 36 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 44
+Macro action chosen:
+act(A,B):- move(A,w,cc,B)
+Time: 8.51185941696167
+
+---Getting Training Data---
+Positive: 21, Negative: 664, Total: 685 (Time: 0.3957056999206543)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,B)
+Precondition not learned
+Time: 17.78151774406433
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 37 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 44
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Time: 8.394856452941895
+
+---Getting Training Data---
+Positive: 21, Negative: 664, Total: 685 (Time: 0.4368762969970703)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 18.125964164733887
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 38 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 46
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Time: 8.444813251495361
+
+---Getting Training Data---
+Positive: 14, Negative: 671, Total: 685 (Time: 0.4330453872680664)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 18.160398960113525
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 39 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 46
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Time: 8.62609577178955
+
+---Getting Training Data---
+Positive: 21, Negative: 664, Total: 685 (Time: 0.436267614364624)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 18.882464170455933
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 40 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 45
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,b,cc,B)
+Time: 8.542282819747925
+
+---Getting Training Data---
+Positive: 42, Negative: 643, Total: 685 (Time: 1.4567227363586426)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 25.659047842025757
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 41 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 47
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Time: 8.543200254440308
+
+---Getting Training Data---
+Positive: 87, Negative: 598, Total: 685 (Time: 1.6362788677215576)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 25.852458715438843
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 42 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 48
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,g,cc,S2),move(S2,r,cl,B)
+Time: 8.774007320404053
+
+---Getting Training Data---
+Positive: 89, Negative: 596, Total: 685 (Time: 1.6287891864776611)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,g,cc,S2),move(S2,r,cl,B)
+Precondition not learned
+Time: 25.270087242126465
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 43 *******
+---Getting Macro Actions---
+Number of banned macro actions: 7
+Macro actions found: 48
+Macro action chosen:
+act(A,B):- move(A,b,cc,S1),move(S1,w,cl,S2),move(S2,b,cl,B)
+Time: 9.004147052764893
+
+---Getting Training Data---
+Positive: 42, Negative: 643, Total: 685 (Time: 1.4557790756225586)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cc,S1),move(S1,w,cl,S2),move(S2,b,cl,B)
+Precondition not learned
+Time: 24.396883487701416
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 44 *******
+---Getting Macro Actions---
+Number of banned macro actions: 8
+Macro actions found: 53
+Macro action chosen:
+act(A,B):- move(A,r,cl,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Time: 9.040520906448364
+
+---Getting Training Data---
+Positive: 120, Negative: 565, Total: 685 (Time: 1.5657806396484375)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cl,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 29.889583110809326
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 45 *******
+---Getting Macro Actions---
+Number of banned macro actions: 9
+Macro actions found: 53
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,g,cl,S2),move(S2,r,cl,B)
+Time: 9.253180265426636
+
+---Getting Training Data---
+Positive: 120, Negative: 565, Total: 685 (Time: 1.58378005027771)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,g,cl,S2),move(S2,r,cl,B)
+Precondition not learned
+Time: 32.96260213851929
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 46 *******
+---Getting Macro Actions---
+Number of banned macro actions: 10
+Macro actions found: 52
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 9.062918663024902
+
+---Getting Training Data---
+Positive: 31, Negative: 654, Total: 685 (Time: 0.4712252616882324)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 22.805399894714355
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 47 *******
+---Getting Macro Actions---
+Number of banned macro actions: 11
+Macro actions found: 54
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Time: 9.075717210769653
+
+---Getting Training Data---
+Positive: 37, Negative: 648, Total: 685 (Time: 1.6868395805358887)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 19.900713443756104
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 48 *******
+---Getting Macro Actions---
+Number of banned macro actions: 12
+Macro actions found: 52
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Time: 9.315568685531616
+
+---Getting Training Data---
+Positive: 32, Negative: 653, Total: 685 (Time: 1.9097561836242676)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 23.312418699264526
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 49 *******
+---Getting Macro Actions---
+Number of banned macro actions: 13
+Macro actions found: 58
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 9.365159273147583
+
+---Getting Training Data---
+Positive: 31, Negative: 654, Total: 685 (Time: 0.46947669982910156)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 21.82641625404358
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 50 *******
+---Getting Macro Actions---
+Number of banned macro actions: 14
+Macro actions found: 56
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Time: 9.401042699813843
+
+---Getting Training Data---
+Positive: 41, Negative: 644, Total: 685 (Time: 1.6811530590057373)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 22.746630907058716
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 51 *******
+---Getting Macro Actions---
+Number of banned macro actions: 15
+Macro actions found: 53
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Time: 9.371283769607544
+
+---Getting Training Data---
+Positive: 41, Negative: 644, Total: 685 (Time: 1.685075283050537)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 25.46078085899353
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 52 *******
+---Getting Macro Actions---
+Number of banned macro actions: 16
+Macro actions found: 57
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Time: 9.495708227157593
+
+---Getting Training Data---
+Positive: 31, Negative: 654, Total: 685 (Time: 0.4858717918395996)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 20.699050188064575
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 53 *******
+---Getting Macro Actions---
+Number of banned macro actions: 17
+Macro actions found: 57
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 9.35342812538147
+
+---Getting Training Data---
+Positive: 31, Negative: 654, Total: 685 (Time: 0.47408103942871094)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 21.44261860847473
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 54 *******
+---Getting Macro Actions---
+Number of banned macro actions: 18
+Macro actions found: 56
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Time: 9.431341171264648
+
+---Getting Training Data---
+Positive: 31, Negative: 654, Total: 685 (Time: 0.47284531593322754)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 21.45675563812256
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 55 *******
+---Getting Macro Actions---
+Number of banned macro actions: 19
+Macro actions found: 56
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,b,cl,S2),move(S2,b,cc,B)
+Time: 9.395579814910889
+
+---Getting Training Data---
+Positive: 21, Negative: 664, Total: 685 (Time: 1.4934477806091309)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,b,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 20.94724726676941
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 56 *******
+---Getting Macro Actions---
+Number of banned macro actions: 20
+Macro actions found: 59
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 9.35240125656128
+
+---Getting Training Data---
+Positive: 31, Negative: 654, Total: 685 (Time: 0.4727628231048584)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 18.633686780929565
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 57 *******
+---Getting Macro Actions---
+Number of banned macro actions: 21
+Macro actions found: 55
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,w,cc,B)
+Time: 9.600446701049805
+
+---Getting Training Data---
+Positive: 21, Negative: 664, Total: 685 (Time: 0.4339325428009033)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 23.00491213798523
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 58 *******
+---Getting Macro Actions---
+Number of banned macro actions: 22
+Macro actions found: 55
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,g,cc,S2),move(S2,g,cl,B)
+Time: 9.5186128616333
+
+---Getting Training Data---
+Positive: 21, Negative: 664, Total: 685 (Time: 1.4970483779907227)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,g,cc,S2),move(S2,g,cl,B)
+Precondition not learned
+Time: 20.3672034740448
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 59 *******
+---Getting Macro Actions---
+Number of banned macro actions: 23
+Macro actions found: 55
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,r,cl,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Time: 9.670411348342896
+
+---Getting Training Data---
+Positive: 94, Negative: 591, Total: 685 (Time: 1.7073495388031006)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,r,cl,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 24.57718276977539
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 60 *******
+---Getting Macro Actions---
+Number of banned macro actions: 24
+Macro actions found: 55
+Macro action chosen:
+act(A,B):- move(A,y,cl,S1),move(S1,o,cc,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Time: 9.643096446990967
+
+---Getting Training Data---
+Positive: 93, Negative: 592, Total: 685 (Time: 1.6795759201049805)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cl,S1),move(S1,o,cc,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 28.29477572441101
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 61 *******
+---Getting Macro Actions---
+Number of banned macro actions: 25
+Macro actions found: 56
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,g,cc,S2),move(S2,r,cl,S3),move(S3,y,cc,B)
+Time: 9.753559589385986
+
+---Getting Training Data---
+Positive: 92, Negative: 593, Total: 685 (Time: 1.666677713394165)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,g,cc,S2),move(S2,r,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 17.960278034210205
+
+---Progress---
+Macro actions learned: 7
+315/1000 states solved (31.5%)
+
+******* Iteration: 62 *******
+---Getting Macro Actions---
+Number of banned macro actions: 26
+Macro actions found: 59
+Macro action chosen:
+act(A,B):- move(A,r,cc,S1),move(S1,w,cc,S2),move(S2,b,cl,S3),move(S3,w,cl,B)
+Time: 9.885363578796387
+
+---Getting Training Data---
+Positive: 177, Negative: 508, Total: 685 (Time: 1.491215705871582)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cc,S1),move(S1,w,cc,S2),move(S2,b,cl,S3),move(S3,w,cl,B)
+Precondition:
+precond(A):- cubelet(C),has_stk(C,B),match_180_flip(A,C,B),white(B),has_stk(C,D),match_0_flip(A,C,D).
+Time: 37.372045040130615
+
+---Applying 8 macro action(s) to 685 unsolved states---
+Num moved: 122, Num Solved: 68
+Time: 7.163022518157959
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 63 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 40
+Macro action chosen:
+act(A,B):- move(A,w,cl,B)
+Time: 7.5946738719940186
+
+---Getting Training Data---
+Positive: 17, Negative: 600, Total: 617 (Time: 0.34891605377197266)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,B)
+Precondition not learned
+Time: 15.729032516479492
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 64 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 47
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Time: 7.725733280181885
+
+---Getting Training Data---
+Positive: 11, Negative: 606, Total: 617 (Time: 0.38191866874694824)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 15.268550872802734
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 65 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 43
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Time: 7.5011491775512695
+
+---Getting Training Data---
+Positive: 17, Negative: 600, Total: 617 (Time: 0.38286304473876953)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 20.41095733642578
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 66 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 42
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,g,cl,S2),move(S2,r,cl,B)
+Time: 7.834003210067749
+
+---Getting Training Data---
+Positive: 105, Negative: 512, Total: 617 (Time: 1.412717580795288)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,g,cl,S2),move(S2,r,cl,B)
+Precondition not learned
+Time: 25.647342205047607
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 67 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 47
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Time: 7.6922667026519775
+
+---Getting Training Data---
+Positive: 17, Negative: 600, Total: 617 (Time: 0.38208556175231934)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 16.732135772705078
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 68 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 44
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,b,cl,S2),move(S2,r,cc,B)
+Time: 7.684093475341797
+
+---Getting Training Data---
+Positive: 74, Negative: 543, Total: 617 (Time: 1.5010638236999512)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,b,cl,S2),move(S2,r,cc,B)
+Precondition not learned
+Time: 24.294005632400513
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 69 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 47
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,b,cc,B)
+Time: 7.967808723449707
+
+---Getting Training Data---
+Positive: 33, Negative: 584, Total: 617 (Time: 1.2848553657531738)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 23.01971936225891
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 70 *******
+---Getting Macro Actions---
+Number of banned macro actions: 7
+Macro actions found: 47
+Macro action chosen:
+act(A,B):- move(A,b,cc,S1),move(S1,w,cl,S2),move(S2,b,cl,B)
+Time: 8.053692817687988
+
+---Getting Training Data---
+Positive: 33, Negative: 584, Total: 617 (Time: 1.2853734493255615)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cc,S1),move(S1,w,cl,S2),move(S2,b,cl,B)
+Precondition not learned
+Time: 17.515215396881104
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 71 *******
+---Getting Macro Actions---
+Number of banned macro actions: 8
+Macro actions found: 49
+Macro action chosen:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,B)
+Time: 8.098902225494385
+
+---Getting Training Data---
+Positive: 105, Negative: 512, Total: 617 (Time: 1.3961412906646729)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 18.868600606918335
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 72 *******
+---Getting Macro Actions---
+Number of banned macro actions: 9
+Macro actions found: 49
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,B)
+Time: 8.069663763046265
+
+---Getting Training Data---
+Positive: 27, Negative: 590, Total: 617 (Time: 1.3753318786621094)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 17.46139144897461
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 73 *******
+---Getting Macro Actions---
+Number of banned macro actions: 10
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 8.233645677566528
+
+---Getting Training Data---
+Positive: 25, Negative: 592, Total: 617 (Time: 0.4136984348297119)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 18.820483446121216
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 74 *******
+---Getting Macro Actions---
+Number of banned macro actions: 11
+Macro actions found: 47
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Time: 7.997903108596802
+
+---Getting Training Data---
+Positive: 31, Negative: 586, Total: 617 (Time: 1.509934902191162)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 19.95206594467163
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 75 *******
+---Getting Macro Actions---
+Number of banned macro actions: 12
+Macro actions found: 44
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 8.006964445114136
+
+---Getting Training Data---
+Positive: 25, Negative: 592, Total: 617 (Time: 0.4129526615142822)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 15.977558374404907
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 76 *******
+---Getting Macro Actions---
+Number of banned macro actions: 13
+Macro actions found: 49
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Time: 8.385619401931763
+
+---Getting Training Data---
+Positive: 31, Negative: 586, Total: 617 (Time: 1.5095398426055908)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Precondition not learned
+Time: 18.050909757614136
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 77 *******
+---Getting Macro Actions---
+Number of banned macro actions: 14
+Macro actions found: 45
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Time: 8.28964376449585
+
+---Getting Training Data---
+Positive: 23, Negative: 594, Total: 617 (Time: 1.753251075744629)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 16.350021362304688
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 78 *******
+---Getting Macro Actions---
+Number of banned macro actions: 15
+Macro actions found: 48
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Time: 8.47696590423584
+
+---Getting Training Data---
+Positive: 27, Negative: 590, Total: 617 (Time: 1.3799371719360352)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 17.780276775360107
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 79 *******
+---Getting Macro Actions---
+Number of banned macro actions: 16
+Macro actions found: 48
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Time: 8.530319929122925
+
+---Getting Training Data---
+Positive: 25, Negative: 592, Total: 617 (Time: 0.41383886337280273)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 15.790039539337158
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 80 *******
+---Getting Macro Actions---
+Number of banned macro actions: 17
+Macro actions found: 47
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Time: 8.55908465385437
+
+---Getting Training Data---
+Positive: 25, Negative: 592, Total: 617 (Time: 0.4161093235015869)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 20.577800750732422
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 81 *******
+---Getting Macro Actions---
+Number of banned macro actions: 18
+Macro actions found: 52
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 8.403743505477905
+
+---Getting Training Data---
+Positive: 25, Negative: 592, Total: 617 (Time: 0.41521334648132324)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 15.350869417190552
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 82 *******
+---Getting Macro Actions---
+Number of banned macro actions: 19
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 8.387426137924194
+
+---Getting Training Data---
+Positive: 25, Negative: 592, Total: 617 (Time: 0.41492128372192383)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 15.178670883178711
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 83 *******
+---Getting Macro Actions---
+Number of banned macro actions: 20
+Macro actions found: 55
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,w,cc,B)
+Time: 8.33194637298584
+
+---Getting Training Data---
+Positive: 17, Negative: 600, Total: 617 (Time: 0.3806021213531494)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 15.078683137893677
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 84 *******
+---Getting Macro Actions---
+Number of banned macro actions: 21
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,r,cl,S2),move(S2,r,cc,B)
+Time: 8.31445860862732
+
+---Getting Training Data---
+Positive: 17, Negative: 600, Total: 617 (Time: 1.3190951347351074)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,r,cl,S2),move(S2,r,cc,B)
+Precondition not learned
+Time: 19.486693143844604
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 85 *******
+---Getting Macro Actions---
+Number of banned macro actions: 22
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,b,cc,S2),move(S2,b,cl,B)
+Time: 8.548264741897583
+
+---Getting Training Data---
+Positive: 17, Negative: 600, Total: 617 (Time: 1.316706657409668)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,b,cc,S2),move(S2,b,cl,B)
+Precondition not learned
+Time: 15.463535070419312
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 86 *******
+---Getting Macro Actions---
+Number of banned macro actions: 23
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,y,cl,S1),move(S1,o,cc,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Time: 8.483020782470703
+
+---Getting Training Data---
+Positive: 80, Negative: 537, Total: 617 (Time: 1.5093576908111572)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cl,S1),move(S1,o,cc,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 28.35466480255127
+
+---Progress---
+Macro actions learned: 8
+383/1000 states solved (38.3%)
+
+******* Iteration: 87 *******
+---Getting Macro Actions---
+Number of banned macro actions: 24
+Macro actions found: 51
+Macro action chosen:
+act(A,B):- move(A,r,cc,S1),move(S1,y,cc,S2),move(S2,r,cl,S3),move(S3,g,cc,B)
+Time: 8.59214472770691
+
+---Getting Training Data---
+Positive: 324, Negative: 293, Total: 617 (Time: 1.35219407081604)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cc,S1),move(S1,y,cc,S2),move(S2,r,cl,S3),move(S3,g,cc,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),white(C),match_180_flip(A,B,C).
+Time: 10.46855902671814
+
+---Applying 9 macro action(s) to 617 unsolved states---
+Num moved: 145, Num Solved: 100
+Time: 7.995204448699951
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 88 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 41
+Macro action chosen:
+act(A,B):- move(A,w,cc,B)
+Time: 6.727294683456421
+
+---Getting Training Data---
+Positive: 6, Negative: 511, Total: 517 (Time: 0.27872323989868164)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,B)
+Precondition not learned
+Time: 25.71405029296875
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 89 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 40
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Time: 6.681586027145386
+
+---Getting Training Data---
+Positive: 6, Negative: 511, Total: 517 (Time: 0.31697821617126465)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 20.112797737121582
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 90 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 36
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Time: 6.577638864517212
+
+---Getting Training Data---
+Positive: 7, Negative: 510, Total: 517 (Time: 0.31237053871154785)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 25.03155255317688
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 91 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 39
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,b,cc,B)
+Time: 6.5442280769348145
+
+---Getting Training Data---
+Positive: 21, Negative: 496, Total: 517 (Time: 1.0455560684204102)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 24.376105785369873
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 92 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 39
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Time: 6.81562352180481
+
+---Getting Training Data---
+Positive: 6, Negative: 511, Total: 517 (Time: 0.3099076747894287)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 12.849932432174683
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 93 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 39
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,B)
+Time: 6.615863561630249
+
+---Getting Training Data---
+Positive: 13, Negative: 504, Total: 517 (Time: 1.138331413269043)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 24.861486196517944
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 94 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 37
+Macro action chosen:
+act(A,B):- move(A,b,cc,S1),move(S1,w,cl,S2),move(S2,b,cl,B)
+Time: 6.862191677093506
+
+---Getting Training Data---
+Positive: 21, Negative: 496, Total: 517 (Time: 1.0758910179138184)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cc,S1),move(S1,w,cl,S2),move(S2,b,cl,B)
+Precondition not learned
+Time: 23.347768306732178
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 95 *******
+---Getting Macro Actions---
+Number of banned macro actions: 7
+Macro actions found: 42
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,g,cl,S2),move(S2,r,cl,B)
+Time: 6.607635259628296
+
+---Getting Training Data---
+Positive: 79, Negative: 438, Total: 517 (Time: 1.1896336078643799)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,g,cl,S2),move(S2,r,cl,B)
+Precondition not learned
+Time: 15.051674604415894
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 96 *******
+---Getting Macro Actions---
+Number of banned macro actions: 8
+Macro actions found: 41
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Time: 6.8928916454315186
+
+---Getting Training Data---
+Positive: 13, Negative: 504, Total: 517 (Time: 1.1447408199310303)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 14.532952308654785
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 97 *******
+---Getting Macro Actions---
+Number of banned macro actions: 9
+Macro actions found: 40
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Time: 6.956546068191528
+
+---Getting Training Data---
+Positive: 18, Negative: 499, Total: 517 (Time: 1.2713913917541504)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 24.134228944778442
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 98 *******
+---Getting Macro Actions---
+Number of banned macro actions: 10
+Macro actions found: 39
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Time: 6.900539875030518
+
+---Getting Training Data---
+Positive: 18, Negative: 499, Total: 517 (Time: 1.2703850269317627)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Precondition not learned
+Time: 18.32107925415039
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 99 *******
+---Getting Macro Actions---
+Number of banned macro actions: 11
+Macro actions found: 38
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 6.869748115539551
+
+---Getting Training Data---
+Positive: 12, Negative: 505, Total: 517 (Time: 0.34633302688598633)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 18.46344518661499
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 100 *******
+---Getting Macro Actions---
+Number of banned macro actions: 12
+Macro actions found: 41
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 6.797614574432373
+
+---Getting Training Data---
+Positive: 12, Negative: 505, Total: 517 (Time: 0.3371400833129883)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 21.851149559020996
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 101 *******
+---Getting Macro Actions---
+Number of banned macro actions: 13
+Macro actions found: 42
+Macro action chosen:
+act(A,B):- move(A,r,cl,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Time: 7.029669523239136
+
+---Getting Training Data---
+Positive: 79, Negative: 438, Total: 517 (Time: 1.1889562606811523)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cl,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 23.928690195083618
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 102 *******
+---Getting Macro Actions---
+Number of banned macro actions: 14
+Macro actions found: 43
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Time: 6.956693649291992
+
+---Getting Training Data---
+Positive: 11, Negative: 506, Total: 517 (Time: 1.4886982440948486)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 16.331915378570557
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 103 *******
+---Getting Macro Actions---
+Number of banned macro actions: 15
+Macro actions found: 43
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Time: 6.996740102767944
+
+---Getting Training Data---
+Positive: 12, Negative: 505, Total: 517 (Time: 0.33965253829956055)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 22.700111627578735
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 104 *******
+---Getting Macro Actions---
+Number of banned macro actions: 16
+Macro actions found: 42
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 7.141641855239868
+
+---Getting Training Data---
+Positive: 12, Negative: 505, Total: 517 (Time: 0.3413269519805908)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 25.09293270111084
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 105 *******
+---Getting Macro Actions---
+Number of banned macro actions: 17
+Macro actions found: 43
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,b,cl,S2),move(S2,b,cc,B)
+Time: 6.8578784465789795
+
+---Getting Training Data---
+Positive: 6, Negative: 511, Total: 517 (Time: 1.0906462669372559)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,b,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 20.04555034637451
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 106 *******
+---Getting Macro Actions---
+Number of banned macro actions: 18
+Macro actions found: 38
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,b,cc,S2),move(S2,b,cl,B)
+Time: 6.785799980163574
+
+---Getting Training Data---
+Positive: 6, Negative: 511, Total: 517 (Time: 1.0916833877563477)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,b,cc,S2),move(S2,b,cl,B)
+Precondition not learned
+Time: 20.485735416412354
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 107 *******
+---Getting Macro Actions---
+Number of banned macro actions: 19
+Macro actions found: 42
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cl,S2),move(S2,o,cc,S3),move(S3,w,cc,B)
+Time: 6.903130292892456
+
+---Getting Training Data---
+Positive: 189, Negative: 328, Total: 517 (Time: 1.0047216415405273)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cl,S2),move(S2,o,cc,S3),move(S3,w,cc,B)
+Precondition not learned
+Time: 32.08666276931763
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 108 *******
+---Getting Macro Actions---
+Number of banned macro actions: 20
+Macro actions found: 46
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Time: 7.858064889907837
+
+---Getting Training Data---
+Positive: 12, Negative: 505, Total: 517 (Time: 0.3377726078033447)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 19.197398900985718
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 109 *******
+---Getting Macro Actions---
+Number of banned macro actions: 21
+Macro actions found: 43
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,w,cc,B)
+Time: 7.9371209144592285
+
+---Getting Training Data---
+Positive: 6, Negative: 511, Total: 517 (Time: 0.30680131912231445)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 16.48335075378418
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 110 *******
+---Getting Macro Actions---
+Number of banned macro actions: 22
+Macro actions found: 42
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 7.685775995254517
+
+---Getting Training Data---
+Positive: 12, Negative: 505, Total: 517 (Time: 0.338604211807251)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 15.945939540863037
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 111 *******
+---Getting Macro Actions---
+Number of banned macro actions: 23
+Macro actions found: 42
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,S3),move(S3,g,cl,B)
+Time: 7.799248456954956
+
+---Getting Training Data---
+Positive: 189, Negative: 328, Total: 517 (Time: 0.9946658611297607)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,S3),move(S3,g,cl,B)
+Precondition not learned
+Time: 34.636873722076416
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 112 *******
+---Getting Macro Actions---
+Number of banned macro actions: 24
+Macro actions found: 45
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,g,cl,S2),move(S2,r,cl,S3),move(S3,y,cc,B)
+Time: 8.829094648361206
+
+---Getting Training Data---
+Positive: 79, Negative: 438, Total: 517 (Time: 1.3233613967895508)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,g,cl,S2),move(S2,r,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 29.419068336486816
+
+---Progress---
+Macro actions learned: 9
+483/1000 states solved (48.3%)
+
+******* Iteration: 113 *******
+---Getting Macro Actions---
+Number of banned macro actions: 25
+Macro actions found: 44
+Macro action chosen:
+act(A,B):- move(A,y,cl,S1),move(S1,y,cl,S2),move(S2,b,cl,S3),move(S3,b,cl,B)
+Time: 8.975230693817139
+
+---Getting Training Data---
+Positive: 187, Negative: 330, Total: 517 (Time: 1.0785226821899414)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cl,S1),move(S1,y,cl,S2),move(S2,b,cl,S3),move(S3,b,cl,B)
+Precondition:
+precond(A):- cubelet(C),has_stk(C,B),white(B),match_180(A,C,B).
+Time: 3.4639294147491455
+
+---Applying 10 macro action(s) to 517 unsolved states---
+Num moved: 183, Num Solved: 133
+Time: 7.897357702255249
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 114 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 28
+Macro action chosen:
+act(A,B):- move(A,w,cl,B)
+Time: 5.23662805557251
+
+---Getting Training Data---
+Positive: 2, Negative: 382, Total: 384 (Time: 0.19727230072021484)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,B)
+Precondition not learned
+Time: 22.466256141662598
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 115 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 30
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Time: 5.262790203094482
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.2252490520477295)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 14.771454334259033
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 116 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 30
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 5.202560186386108
+
+---Getting Training Data---
+Positive: 5, Negative: 379, Total: 384 (Time: 0.23973536491394043)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 21.103802919387817
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 117 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 29
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Time: 5.234285116195679
+
+---Getting Training Data---
+Positive: 2, Negative: 382, Total: 384 (Time: 0.21836495399475098)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 25.19180727005005
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 118 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 30
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Time: 8.383580684661865
+
+---Getting Training Data---
+Positive: 2, Negative: 382, Total: 384 (Time: 0.25058460235595703)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,B)
+Precondition not learned
+Time: 15.431849479675293
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 119 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 34
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,B)
+Time: 5.6265363693237305
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.8875174522399902)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 21.940940618515015
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 120 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 32
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 5.668731451034546
+
+---Getting Training Data---
+Positive: 5, Negative: 379, Total: 384 (Time: 0.27599120140075684)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 21.01252770423889
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 121 *******
+---Getting Macro Actions---
+Number of banned macro actions: 7
+Macro actions found: 31
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Time: 5.465325355529785
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.893606424331665)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 24.178915977478027
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 122 *******
+---Getting Macro Actions---
+Number of banned macro actions: 8
+Macro actions found: 32
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Time: 5.8679211139678955
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 1.2227668762207031)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 22.446518898010254
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 123 *******
+---Getting Macro Actions---
+Number of banned macro actions: 9
+Macro actions found: 33
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,S2),move(S2,o,cc,B)
+Time: 5.527633905410767
+
+---Getting Training Data---
+Positive: 54, Negative: 330, Total: 384 (Time: 0.871727466583252)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,S2),move(S2,o,cc,B)
+Precondition not learned
+Time: 19.588096857070923
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 124 *******
+---Getting Macro Actions---
+Number of banned macro actions: 10
+Macro actions found: 31
+Macro action chosen:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,B)
+Time: 5.599626064300537
+
+---Getting Training Data---
+Positive: 54, Negative: 330, Total: 384 (Time: 0.884049654006958)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 27.46725869178772
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 125 *******
+---Getting Macro Actions---
+Number of banned macro actions: 11
+Macro actions found: 36
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Time: 5.535947322845459
+
+---Getting Training Data---
+Positive: 5, Negative: 379, Total: 384 (Time: 0.24240875244140625)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 23.84057641029358
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 126 *******
+---Getting Macro Actions---
+Number of banned macro actions: 12
+Macro actions found: 36
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Time: 6.158930778503418
+
+---Getting Training Data---
+Positive: 6, Negative: 378, Total: 384 (Time: 1.0074620246887207)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 24.067230463027954
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 127 *******
+---Getting Macro Actions---
+Number of banned macro actions: 13
+Macro actions found: 34
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Time: 5.233990430831909
+
+---Getting Training Data---
+Positive: 6, Negative: 378, Total: 384 (Time: 0.9642269611358643)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Precondition not learned
+Time: 26.60484552383423
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 128 *******
+---Getting Macro Actions---
+Number of banned macro actions: 14
+Macro actions found: 34
+Macro action chosen:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cc,S2),move(S2,o,cl,B)
+Time: 5.324028253555298
+
+---Getting Training Data---
+Positive: 11, Negative: 373, Total: 384 (Time: 0.763984203338623)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cc,S2),move(S2,o,cl,B)
+Precondition not learned
+Time: 21.654634475708008
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 129 *******
+---Getting Macro Actions---
+Number of banned macro actions: 15
+Macro actions found: 34
+Macro action chosen:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cl,S2),move(S2,o,cl,B)
+Time: 5.503355979919434
+
+---Getting Training Data---
+Positive: 11, Negative: 373, Total: 384 (Time: 0.7588176727294922)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cl,S2),move(S2,o,cl,B)
+Precondition not learned
+Time: 15.109434604644775
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 130 *******
+---Getting Macro Actions---
+Number of banned macro actions: 16
+Macro actions found: 33
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 5.493001699447632
+
+---Getting Training Data---
+Positive: 5, Negative: 379, Total: 384 (Time: 0.2416377067565918)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 16.89468502998352
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 131 *******
+---Getting Macro Actions---
+Number of banned macro actions: 17
+Macro actions found: 35
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cl,S2),move(S2,o,cc,S3),move(S3,w,cc,B)
+Time: 7.230232000350952
+
+---Getting Training Data---
+Positive: 182, Negative: 202, Total: 384 (Time: 0.8826372623443604)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cl,S2),move(S2,o,cc,S3),move(S3,w,cc,B)
+Precondition not learned
+Time: 33.28755593299866
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 132 *******
+---Getting Macro Actions---
+Number of banned macro actions: 18
+Macro actions found: 35
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Time: 5.903107643127441
+
+---Getting Training Data---
+Positive: 5, Negative: 379, Total: 384 (Time: 0.24459218978881836)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,y,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 24.05758547782898
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 133 *******
+---Getting Macro Actions---
+Number of banned macro actions: 19
+Macro actions found: 32
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,w,cc,B)
+Time: 6.108789682388306
+
+---Getting Training Data---
+Positive: 2, Negative: 382, Total: 384 (Time: 0.2235245704650879)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 23.933727502822876
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 134 *******
+---Getting Macro Actions---
+Number of banned macro actions: 20
+Macro actions found: 34
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,S3),move(S3,y,cc,B)
+Time: 6.223338842391968
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.2636759281158447)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 21.21543526649475
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 135 *******
+---Getting Macro Actions---
+Number of banned macro actions: 21
+Macro actions found: 35
+Macro action chosen:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 6.0383241176605225
+
+---Getting Training Data---
+Positive: 5, Negative: 379, Total: 384 (Time: 0.24154090881347656)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,y,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 19.607487440109253
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 136 *******
+---Getting Macro Actions---
+Number of banned macro actions: 22
+Macro actions found: 32
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,S3),move(S3,y,cc,B)
+Time: 6.17235541343689
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.2628302574157715)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 26.350515604019165
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 137 *******
+---Getting Macro Actions---
+Number of banned macro actions: 23
+Macro actions found: 35
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,S3),move(S3,y,cc,B)
+Time: 6.311557292938232
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.8860194683074951)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 23.304428577423096
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 138 *******
+---Getting Macro Actions---
+Number of banned macro actions: 24
+Macro actions found: 35
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,r,cl,S2),move(S2,r,cc,B)
+Time: 6.246870040893555
+
+---Getting Training Data---
+Positive: 2, Negative: 382, Total: 384 (Time: 0.7815446853637695)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,r,cl,S2),move(S2,r,cc,B)
+Precondition not learned
+Time: 23.014347076416016
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 139 *******
+---Getting Macro Actions---
+Number of banned macro actions: 25
+Macro actions found: 37
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,b,cl,S2),move(S2,b,cc,B)
+Time: 6.38334321975708
+
+---Getting Training Data---
+Positive: 2, Negative: 382, Total: 384 (Time: 0.7964112758636475)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,b,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 21.240487575531006
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 140 *******
+---Getting Macro Actions---
+Number of banned macro actions: 26
+Macro actions found: 34
+Macro action chosen:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,S3),move(S3,y,cc,B)
+Time: 6.344544410705566
+
+---Getting Training Data---
+Positive: 54, Negative: 330, Total: 384 (Time: 0.987598180770874)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 26.37287425994873
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 141 *******
+---Getting Macro Actions---
+Number of banned macro actions: 27
+Macro actions found: 35
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,o,cl,S3),move(S3,o,cc,B)
+Time: 6.288167238235474
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.8636808395385742)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,o,cl,S3),move(S3,o,cc,B)
+Precondition not learned
+Time: 21.455963373184204
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 142 *******
+---Getting Macro Actions---
+Number of banned macro actions: 28
+Macro actions found: 34
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,S3),move(S3,y,cc,B)
+Time: 6.416610240936279
+
+---Getting Training Data---
+Positive: 6, Negative: 378, Total: 384 (Time: 1.0164527893066406)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 18.955925226211548
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 143 *******
+---Getting Macro Actions---
+Number of banned macro actions: 29
+Macro actions found: 32
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Time: 6.442718982696533
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.8839194774627686)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 25.554096937179565
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 144 *******
+---Getting Macro Actions---
+Number of banned macro actions: 30
+Macro actions found: 33
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,S3),move(S3,y,cc,B)
+Time: 6.3815484046936035
+
+---Getting Training Data---
+Positive: 6, Negative: 378, Total: 384 (Time: 1.0524771213531494)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 25.858234167099
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 145 *******
+---Getting Macro Actions---
+Number of banned macro actions: 31
+Macro actions found: 36
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,o,cc,S3),move(S3,o,cl,B)
+Time: 6.374315023422241
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.8649351596832275)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,o,cc,S3),move(S3,o,cl,B)
+Precondition not learned
+Time: 19.55874276161194
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 146 *******
+---Getting Macro Actions---
+Number of banned macro actions: 32
+Macro actions found: 35
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,w,cl,S3),move(S3,b,cc,B)
+Time: 6.1555140018463135
+
+---Getting Training Data---
+Positive: 182, Negative: 202, Total: 384 (Time: 0.7149238586425781)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,w,cl,S3),move(S3,b,cc,B)
+Precondition not learned
+Time: 17.598739862442017
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 147 *******
+---Getting Macro Actions---
+Number of banned macro actions: 33
+Macro actions found: 34
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cl,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Time: 7.389986753463745
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.8670740127563477)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cl,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 21.661688327789307
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 148 *******
+---Getting Macro Actions---
+Number of banned macro actions: 34
+Macro actions found: 37
+Macro action chosen:
+act(A,B):- move(A,b,cc,S1),move(S1,r,cc,S2),move(S2,w,cl,S3),move(S3,y,cc,B)
+Time: 7.221614360809326
+
+---Getting Training Data---
+Positive: 4, Negative: 380, Total: 384 (Time: 0.868506669998169)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cc,S1),move(S1,r,cc,S2),move(S2,w,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 25.57697367668152
+
+---Progress---
+Macro actions learned: 10
+616/1000 states solved (61.6%)
+
+******* Iteration: 149 *******
+---Getting Macro Actions---
+Number of banned macro actions: 35
+Macro actions found: 37
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cc,S2),move(S2,g,cl,S3),move(S3,w,cl,B)
+Time: 7.666966199874878
+
+---Getting Training Data---
+Positive: 22, Negative: 362, Total: 384 (Time: 0.7896239757537842)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cc,S2),move(S2,g,cl,S3),move(S3,w,cl,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),match_90(A,B,C),has_stk(B,D),match_0(A,B,D).
+Time: 3.172032594680786
+
+---Applying 11 macro action(s) to 384 unsolved states---
+Num moved: 22, Num Solved: 1
+Time: 3.515685558319092
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 150 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 24
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,B)
+Time: 5.19455099105835
+
+---Getting Training Data---
+Positive: 3, Negative: 380, Total: 383 (Time: 0.22034859657287598)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,B)
+Precondition not learned
+Time: 21.569412231445312
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 151 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 25
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 5.193699836730957
+
+---Getting Training Data---
+Positive: 3, Negative: 380, Total: 383 (Time: 0.23813557624816895)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 24.363901615142822
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 152 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 25
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,B)
+Time: 5.0844407081604
+
+---Getting Training Data---
+Positive: 2, Negative: 381, Total: 383 (Time: 0.7781209945678711)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 22.316670417785645
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 153 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 24
+Macro action chosen:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,B)
+Time: 5.14899468421936
+
+---Getting Training Data---
+Positive: 42, Negative: 341, Total: 383 (Time: 0.8708500862121582)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 22.052388906478882
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 154 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 24
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 5.170419216156006
+
+---Getting Training Data---
+Positive: 3, Negative: 380, Total: 383 (Time: 0.22922062873840332)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 12.875252485275269
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 155 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 25
+Macro action chosen:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Time: 5.165042161941528
+
+---Getting Training Data---
+Positive: 4, Negative: 379, Total: 383 (Time: 0.9321208000183105)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Precondition not learned
+Time: 20.392911434173584
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 156 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 26
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Time: 5.163891792297363
+
+---Getting Training Data---
+Positive: 4, Negative: 379, Total: 383 (Time: 0.9328477382659912)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Precondition not learned
+Time: 18.59304189682007
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 157 *******
+---Getting Macro Actions---
+Number of banned macro actions: 7
+Macro actions found: 24
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,S2),move(S2,o,cc,B)
+Time: 5.3260180950164795
+
+---Getting Training Data---
+Positive: 42, Negative: 341, Total: 383 (Time: 0.8732776641845703)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,S2),move(S2,o,cc,B)
+Precondition not learned
+Time: 23.40993642807007
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 158 *******
+---Getting Macro Actions---
+Number of banned macro actions: 8
+Macro actions found: 26
+Macro action chosen:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,S3),move(S3,y,cc,B)
+Time: 5.409329652786255
+
+---Getting Training Data---
+Positive: 42, Negative: 341, Total: 383 (Time: 1.0095858573913574)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cl,S1),move(S1,o,cl,S2),move(S2,b,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 17.1720871925354
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 159 *******
+---Getting Macro Actions---
+Number of banned macro actions: 9
+Macro actions found: 27
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Time: 5.0958571434021
+
+---Getting Training Data---
+Positive: 2, Negative: 381, Total: 383 (Time: 0.7802064418792725)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 16.684155464172363
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 160 *******
+---Getting Macro Actions---
+Number of banned macro actions: 10
+Macro actions found: 27
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cl,S2),move(S2,o,cc,S3),move(S3,w,cc,B)
+Time: 5.34559440612793
+
+---Getting Training Data---
+Positive: 182, Negative: 201, Total: 383 (Time: 0.6796760559082031)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cl,S2),move(S2,o,cc,S3),move(S3,w,cc,B)
+Precondition not learned
+Time: 29.05443000793457
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 161 *******
+---Getting Macro Actions---
+Number of banned macro actions: 11
+Macro actions found: 26
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,S3),move(S3,y,cc,B)
+Time: 6.123403787612915
+
+---Getting Training Data---
+Positive: 4, Negative: 379, Total: 383 (Time: 0.9745447635650635)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 22.639697790145874
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 162 *******
+---Getting Macro Actions---
+Number of banned macro actions: 12
+Macro actions found: 28
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Time: 6.129367828369141
+
+---Getting Training Data---
+Positive: 2, Negative: 381, Total: 383 (Time: 1.1567630767822266)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 12.488865375518799
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 163 *******
+---Getting Macro Actions---
+Number of banned macro actions: 13
+Macro actions found: 30
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,S3),move(S3,y,cc,B)
+Time: 6.320396661758423
+
+---Getting Training Data---
+Positive: 3, Negative: 380, Total: 383 (Time: 0.2576005458831787)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 11.246277093887329
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 164 *******
+---Getting Macro Actions---
+Number of banned macro actions: 14
+Macro actions found: 25
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,S3),move(S3,y,cc,B)
+Time: 6.212708950042725
+
+---Getting Training Data---
+Positive: 3, Negative: 380, Total: 383 (Time: 0.2566802501678467)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 21.625148057937622
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 165 *******
+---Getting Macro Actions---
+Number of banned macro actions: 15
+Macro actions found: 25
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,S3),move(S3,y,cc,B)
+Time: 6.054271697998047
+
+---Getting Training Data---
+Positive: 2, Negative: 381, Total: 383 (Time: 0.7958471775054932)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,w,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 23.227681398391724
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 166 *******
+---Getting Macro Actions---
+Number of banned macro actions: 16
+Macro actions found: 26
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Time: 6.133671760559082
+
+---Getting Training Data---
+Positive: 2, Negative: 381, Total: 383 (Time: 0.7920420169830322)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,r,cc,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 25.094669580459595
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 167 *******
+---Getting Macro Actions---
+Number of banned macro actions: 17
+Macro actions found: 26
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,S3),move(S3,y,cc,B)
+Time: 6.18788743019104
+
+---Getting Training Data---
+Positive: 4, Negative: 379, Total: 383 (Time: 0.9740760326385498)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,w,cl,S2),move(S2,w,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 20.710816621780396
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 168 *******
+---Getting Macro Actions---
+Number of banned macro actions: 18
+Macro actions found: 28
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,w,cl,S3),move(S3,b,cc,B)
+Time: 6.132279872894287
+
+---Getting Training Data---
+Positive: 182, Negative: 201, Total: 383 (Time: 0.6529624462127686)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,w,cl,S3),move(S3,b,cc,B)
+Precondition not learned
+Time: 25.029337882995605
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 169 *******
+---Getting Macro Actions---
+Number of banned macro actions: 19
+Macro actions found: 28
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,o,cl,S3),move(S3,o,cc,B)
+Time: 7.284076690673828
+
+---Getting Training Data---
+Positive: 3, Negative: 380, Total: 383 (Time: 0.8203103542327881)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,o,cl,S3),move(S3,o,cc,B)
+Precondition not learned
+Time: 22.217527866363525
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 170 *******
+---Getting Macro Actions---
+Number of banned macro actions: 20
+Macro actions found: 31
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cl,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Time: 7.3125526905059814
+
+---Getting Training Data---
+Positive: 2, Negative: 381, Total: 383 (Time: 0.7899739742279053)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cl,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 17.770975589752197
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 171 *******
+---Getting Macro Actions---
+Number of banned macro actions: 21
+Macro actions found: 32
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,r,cl,S3),move(S3,r,cc,B)
+Time: 7.1546525955200195
+
+---Getting Training Data---
+Positive: 3, Negative: 380, Total: 383 (Time: 0.849816083908081)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,r,cl,S3),move(S3,r,cc,B)
+Precondition not learned
+Time: 24.916048049926758
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 172 *******
+---Getting Macro Actions---
+Number of banned macro actions: 22
+Macro actions found: 28
+Macro action chosen:
+act(A,B):- move(A,r,cc,S1),move(S1,r,cc,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Time: 7.148933172225952
+
+---Getting Training Data---
+Positive: 42, Negative: 341, Total: 383 (Time: 1.0172069072723389)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cc,S1),move(S1,r,cc,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 23.89322781562805
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 173 *******
+---Getting Macro Actions---
+Number of banned macro actions: 23
+Macro actions found: 30
+Macro action chosen:
+act(A,B):- move(A,b,cc,S1),move(S1,r,cc,S2),move(S2,w,cl,S3),move(S3,y,cc,B)
+Time: 7.400454759597778
+
+---Getting Training Data---
+Positive: 2, Negative: 381, Total: 383 (Time: 0.8234741687774658)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cc,S1),move(S1,r,cc,S2),move(S2,w,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 16.421077728271484
+
+---Progress---
+Macro actions learned: 11
+617/1000 states solved (61.7%)
+
+******* Iteration: 174 *******
+---Getting Macro Actions---
+Number of banned macro actions: 24
+Macro actions found: 26
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,r,cl,S2),move(S2,w,cl,S3),move(S3,b,cl,B)
+Time: 7.355504035949707
+
+---Getting Training Data---
+Positive: 24, Negative: 359, Total: 383 (Time: 0.7727878093719482)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,r,cl,S2),move(S2,w,cl,S3),move(S3,b,cl,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),match_180_flip(A,B,C).
+Time: 1.4996206760406494
+
+---Applying 12 macro action(s) to 383 unsolved states---
+Num moved: 24, Num Solved: 16
+Time: 3.95306396484375
+
+---Progress---
+Macro actions learned: 12
+633/1000 states solved (63.3%)
+
+******* Iteration: 175 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 18
+Macro action chosen:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Time: 4.796058177947998
+
+---Getting Training Data---
+Positive: 2, Negative: 365, Total: 367 (Time: 0.8829653263092041)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cl,S2),move(S2,w,cl,B)
+Precondition not learned
+Time: 9.905740976333618
+
+---Progress---
+Macro actions learned: 12
+633/1000 states solved (63.3%)
+
+******* Iteration: 176 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 21
+Macro action chosen:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Time: 4.798850774765015
+
+---Getting Training Data---
+Positive: 2, Negative: 365, Total: 367 (Time: 0.8818614482879639)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cc,S1),move(S1,w,cc,S2),move(S2,w,cc,B)
+Precondition not learned
+Time: 8.768709182739258
+
+---Progress---
+Macro actions learned: 12
+633/1000 states solved (63.3%)
+
+******* Iteration: 177 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 20
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Time: 4.7899181842803955
+
+---Getting Training Data---
+Positive: 2, Negative: 365, Total: 367 (Time: 0.2076253890991211)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,B)
+Precondition not learned
+Time: 12.065634727478027
+
+---Progress---
+Macro actions learned: 12
+633/1000 states solved (63.3%)
+
+******* Iteration: 178 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 18
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Time: 4.756105899810791
+
+---Getting Training Data---
+Positive: 2, Negative: 365, Total: 367 (Time: 0.21646451950073242)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,w,cc,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 10.744160413742065
+
+---Progress---
+Macro actions learned: 12
+633/1000 states solved (63.3%)
+
+******* Iteration: 179 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 19
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,S2),move(S2,r,cl,B)
+Time: 4.846118211746216
+
+---Getting Training Data---
+Positive: 38, Negative: 329, Total: 367 (Time: 0.8305315971374512)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,S2),move(S2,r,cl,B)
+Precondition not learned
+Time: 10.810417175292969
+
+---Progress---
+Macro actions learned: 12
+633/1000 states solved (63.3%)
+
+******* Iteration: 180 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 20
+Macro action chosen:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Time: 4.899334907531738
+
+---Getting Training Data---
+Positive: 2, Negative: 365, Total: 367 (Time: 1.1139421463012695)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,B)
+Precondition not learned
+Time: 14.163518190383911
+
+---Progress---
+Macro actions learned: 12
+633/1000 states solved (63.3%)
+
+******* Iteration: 181 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 19
+Macro action chosen:
+act(A,B):- move(A,r,cc,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Time: 4.830573081970215
+
+---Getting Training Data---
+Positive: 38, Negative: 329, Total: 367 (Time: 0.834761381149292)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cc,S1),move(S1,r,cc,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 13.768974542617798
+
+---Progress---
+Macro actions learned: 12
+633/1000 states solved (63.3%)
+
+******* Iteration: 182 *******
+---Getting Macro Actions---
+Number of banned macro actions: 7
+Macro actions found: 23
+Macro action chosen:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Time: 4.837883472442627
+
+---Getting Training Data---
+Positive: 2, Negative: 365, Total: 367 (Time: 0.21622562408447266)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,w,cl,S1),move(S1,w,cl,S2),move(S2,y,cc,B)
+Precondition not learned
+Time: 10.467329263687134
+
+---Progress---
+Macro actions learned: 12
+633/1000 states solved (63.3%)
+
+******* Iteration: 183 *******
+---Getting Macro Actions---
+Number of banned macro actions: 8
+Macro actions found: 23
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cl,S2),move(S2,o,cc,S3),move(S3,w,cc,B)
+Time: 4.966036796569824
+
+---Getting Training Data---
+Positive: 182, Negative: 185, Total: 367 (Time: 0.6384177207946777)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,w,cl,S2),move(S2,o,cc,S3),move(S3,w,cc,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),match_0_flip(A,B,C).
+Time: 1.5627508163452148
+
+---Applying 13 macro action(s) to 367 unsolved states---
+Num moved: 182, Num Solved: 172
+Time: 7.5938804149627686
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 184 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 15
+Macro action chosen:
+act(A,B):- move(A,r,cl,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Time: 2.9656476974487305
+
+---Getting Training Data---
+Positive: 20, Negative: 175, Total: 195 (Time: 0.4799954891204834)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cl,S1),move(S1,r,cl,S2),move(S2,g,cc,B)
+Precondition not learned
+Time: 6.3154730796813965
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 185 *******
+---Getting Macro Actions---
+Number of banned macro actions: 1
+Macro actions found: 14
+Macro action chosen:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,S2),move(S2,o,cc,B)
+Time: 2.9866857528686523
+
+---Getting Training Data---
+Positive: 20, Negative: 175, Total: 195 (Time: 0.49367761611938477)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cc,S1),move(S1,g,cc,S2),move(S2,o,cc,B)
+Precondition not learned
+Time: 6.01193904876709
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 186 *******
+---Getting Macro Actions---
+Number of banned macro actions: 2
+Macro actions found: 16
+Macro action chosen:
+act(A,B):- move(A,o,cc,S1),move(S1,o,cc,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Time: 3.0536277294158936
+
+---Getting Training Data---
+Positive: 20, Negative: 175, Total: 195 (Time: 0.5938668251037598)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cc,S1),move(S1,o,cc,S2),move(S2,g,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 5.283991098403931
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 187 *******
+---Getting Macro Actions---
+Number of banned macro actions: 3
+Macro actions found: 17
+Macro action chosen:
+act(A,B):- move(A,r,cl,S1),move(S1,r,cl,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Time: 3.012075185775757
+
+---Getting Training Data---
+Positive: 20, Negative: 175, Total: 195 (Time: 0.5992741584777832)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cl,S1),move(S1,r,cl,S2),move(S2,g,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 6.631760120391846
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 188 *******
+---Getting Macro Actions---
+Number of banned macro actions: 4
+Macro actions found: 16
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,b,cl,S2),move(S2,o,cl,S3),move(S3,y,cc,B)
+Time: 3.0019595623016357
+
+---Getting Training Data---
+Positive: 20, Negative: 175, Total: 195 (Time: 0.5975024700164795)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,b,cl,S2),move(S2,o,cl,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 6.201705694198608
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 189 *******
+---Getting Macro Actions---
+Number of banned macro actions: 5
+Macro actions found: 18
+Macro action chosen:
+act(A,B):- move(A,r,cc,S1),move(S1,w,cc,S2),move(S2,w,cc,S3),move(S3,r,cl,B)
+Time: 3.146711826324463
+
+---Getting Training Data---
+Positive: 20, Negative: 175, Total: 195 (Time: 0.6178932189941406)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cc,S1),move(S1,w,cc,S2),move(S2,w,cc,S3),move(S3,r,cl,B)
+Precondition not learned
+Time: 6.353962182998657
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 190 *******
+---Getting Macro Actions---
+Number of banned macro actions: 6
+Macro actions found: 18
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,o,cl,S3),move(S3,g,cl,B)
+Time: 3.0723698139190674
+
+---Getting Training Data---
+Positive: 2, Negative: 193, Total: 195 (Time: 0.4431343078613281)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,o,cl,S2),move(S2,o,cl,S3),move(S3,g,cl,B)
+Precondition not learned
+Time: 6.512184143066406
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 191 *******
+---Getting Macro Actions---
+Number of banned macro actions: 7
+Macro actions found: 17
+Macro action chosen:
+act(A,B):- move(A,r,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,S3),move(S3,r,cc,B)
+Time: 3.132758378982544
+
+---Getting Training Data---
+Positive: 20, Negative: 175, Total: 195 (Time: 0.6225998401641846)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,r,cl,S1),move(S1,w,cc,S2),move(S2,w,cc,S3),move(S3,r,cc,B)
+Precondition not learned
+Time: 3.9249093532562256
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 192 *******
+---Getting Macro Actions---
+Number of banned macro actions: 8
+Macro actions found: 18
+Macro action chosen:
+act(A,B):- move(A,o,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,S3),move(S3,y,cc,B)
+Time: 3.0467662811279297
+
+---Getting Training Data---
+Positive: 20, Negative: 175, Total: 195 (Time: 0.5981161594390869)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,o,cc,S1),move(S1,o,cc,S2),move(S2,b,cc,S3),move(S3,y,cc,B)
+Precondition not learned
+Time: 6.235723257064819
+
+---Progress---
+Macro actions learned: 13
+805/1000 states solved (80.5%)
+
+******* Iteration: 193 *******
+---Getting Macro Actions---
+Number of banned macro actions: 9
+Macro actions found: 17
+Macro action chosen:
+act(A,B):- move(A,b,cl,S1),move(S1,b,cl,S2),move(S2,r,cc,S3),move(S3,b,cc,S4),move(S4,b,cc,B)
+Time: 3.1024985313415527
+
+---Getting Training Data---
+Positive: 187, Negative: 8, Total: 195 (Time: 0.32354283332824707)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,b,cl,S1),move(S1,b,cl,S2),move(S2,r,cc,S3),move(S3,b,cc,S4),move(S4,b,cc,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),match_90(A,B,C).
+Time: 1.5370659828186035
+
+---Applying 14 macro action(s) to 195 unsolved states---
+Num moved: 187, Num Solved: 187
+Time: 6.075963020324707
+
+---Progress---
+Macro actions learned: 14
+992/1000 states solved (99.2%)
+
+******* Iteration: 194 *******
+---Getting Macro Actions---
+Number of banned macro actions: 0
+Macro actions found: 3
+Macro action chosen:
+act(A,B):- move(A,g,cl,S1),move(S1,b,cc,S2),move(S2,w,cl,S3),move(S3,w,cl,S4),move(S4,b,cl,S5),move(S5,g,cc,B)
+Time: 0.4990363121032715
+
+---Getting Training Data---
+Positive: 8, Negative: 0, Total: 8 (Time: 0.025912761688232422)
+
+---Learning precondition program---
+Result for macro action:
+act(A,B):- move(A,g,cl,S1),move(S1,b,cc,S2),move(S2,w,cl,S3),move(S3,w,cl,S4),move(S4,b,cl,S5),move(S5,g,cc,B)
+Precondition:
+precond(A):- cubelet(B),has_stk(B,C),match_180(A,B,C).
+Time: 1.4282395839691162
+
+---Applying 15 macro action(s) to 8 unsolved states---
+Num moved: 8, Num Solved: 8
+Time: 0.264148473739624
+
+---Progress---
+Macro actions learned: 15
+1000/1000 states solved (100.0%)
+
+Time: 5947.12854886055
+
+---Building Decision Tree---
+Time: 2.384185791015625e-07
+
